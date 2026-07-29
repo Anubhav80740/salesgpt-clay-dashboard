@@ -11,7 +11,7 @@ import {
   ShieldAlert,
   Sliders,
   Settings,
-  Sparkles,
+  BarChart3,
   RefreshCw,
 } from 'lucide-react';
 
@@ -49,9 +49,9 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         }`}
       >
         <div>
-          {/* Dashboard Header Logo matching screenshot */}
+          {/* Dashboard Header Logo */}
           <div className="h-16 px-5 border-b border-slate-100 flex items-center gap-2.5">
-            <Sparkles className="w-5 h-5 text-salesgpt-600 shrink-0" />
+            <BarChart3 className="w-5 h-5 text-salesgpt-600 shrink-0" />
             <span className="font-bold text-slate-900 text-sm tracking-tight">
               SalesGPT Data Dashboard
             </span>

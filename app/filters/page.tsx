@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { SectionHeader } from '@/components/dashboard/SectionHeader';
 import { DashboardShell } from '@/components/layout/DashboardShell';
 import { StatCard } from '@/components/dashboard/StatCard';
-import { Sliders, RotateCcw, Filter, CheckCircle2, Sparkles, Building2 } from 'lucide-react';
+import { Sliders, RotateCcw, Filter, CheckCircle2, Compass, Building2 } from 'lucide-react';
 import { getFilterOptions, getOverviewMetrics } from '@/services/dashboard';
 import { formatNumber } from '@/utils/formatters';
 
@@ -53,7 +53,7 @@ export default function FiltersPage() {
                 title="Qualified Clay Net-New"
                 value={formatNumber(metrics.clayOnlyNewCompanies)}
                 subtitle="Ready for CRM enrichment"
-                icon={Sparkles}
+                icon={Compass}
                 iconColor="orange"
               />
             </div>

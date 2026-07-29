@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useRouter } from 'next/navigation';
-import { Calendar, Menu, Building2, Users, Sparkles, LogOut, UserCheck } from 'lucide-react';
+import { Calendar, Menu, Building2, Users, BarChart3, LogOut, UserCheck } from 'lucide-react';
 
 interface TopbarProps {
   onToggleSidebar: () => void;
@@ -43,7 +43,7 @@ export function Topbar({
 
         {/* Title for small screens */}
         <div className="flex items-center gap-2 lg:hidden">
-          <Sparkles className="w-4 h-4 text-salesgpt-600" />
+          <BarChart3 className="w-4 h-4 text-salesgpt-600" />
           <span className="font-bold text-slate-900 text-sm">SalesGPT Data Dashboard</span>
         </div>
 

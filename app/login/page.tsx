@@ -2,7 +2,7 @@
 
 import React, { useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { Sparkles, Lock, User, Eye, EyeOff, AlertCircle, CheckCircle2, ShieldCheck } from 'lucide-react';
+import { BarChart3, Lock, User, Eye, EyeOff, AlertCircle, CheckCircle2, ShieldCheck } from 'lucide-react';
 
 function LoginForm() {
   const router = useRouter();
@@ -140,7 +140,7 @@ export default function LoginPage() {
         {/* Header Branding */}
         <div className="text-center space-y-2">
           <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-blue-600 text-white shadow-md mb-1">
-            <Sparkles className="w-6 h-6" />
+            <BarChart3 className="w-6 h-6" />
           </div>
           <h1 className="text-2xl font-extrabold text-slate-900 tracking-tight">
             SalesGPT Data Dashboard
