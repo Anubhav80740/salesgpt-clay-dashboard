@@ -12,7 +12,7 @@ interface FilterBarProps {
 }
 
 export function FilterBar({ filters, options, onChange, onReset }: FilterBarProps) {
-  const [isExpanded, setIsExpanded] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const handleSelectChange = (key: keyof GlobalFilterState, value: string) => {
     onChange({

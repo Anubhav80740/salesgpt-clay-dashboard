@@ -29,7 +29,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     { name: 'Duplicates', href: '/duplicates', icon: CopyX },
     { name: 'Pipeline', href: '/pipeline', icon: GitMerge },
     { name: 'Data Quality', href: '/field-issues', icon: ShieldAlert },
-    { name: 'Filters', href: '/#filters', icon: Sliders },
+    { name: 'Filters', href: '/filters', icon: Sliders },
     { name: 'Settings', href: '/settings', icon: Settings },
   ];
 
