@@ -1,0 +1,46 @@
+{
+  "summary": {
+    "duplicateGroups": 4820,
+    "duplicateRowsRemoved": 9176,
+    "manualReviewNeeded": 636,
+    "confirmedMatches": 8540
+  },
+  "types": [
+    {
+      "id": "d1",
+      "duplicateType": "Exact Domain Match",
+      "groups": 2840,
+      "rowsRemoved": 4217,
+      "status": "Cleaned",
+      "percentage": 46.0,
+      "color": "#2563EB"
+    },
+    {
+      "id": "d2",
+      "duplicateType": "Name + Domain Variants",
+      "groups": 1280,
+      "rowsRemoved": 2981,
+      "status": "Cleaned",
+      "percentage": 32.0,
+      "color": "#16A34A"
+    },
+    {
+      "id": "d3",
+      "duplicateType": "Legal Entity Variants",
+      "groups": 450,
+      "rowsRemoved": 1342,
+      "status": "In Progress",
+      "percentage": 15.0,
+      "color": "#EAB308"
+    },
+    {
+      "id": "d4",
+      "duplicateType": "Other / Fuzzy Matches",
+      "groups": 250,
+      "rowsRemoved": 636,
+      "status": "Requires Review",
+      "percentage": 7.0,
+      "color": "#94A3B8"
+    }
+  ]
+}

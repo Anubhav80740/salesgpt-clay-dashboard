@@ -1,0 +1,38 @@
+[
+  {
+    "id": "p1",
+    "stageName": "Raw Found",
+    "stageOrder": 1,
+    "count": 68214,
+    "subtitle": "Total raw records pulled from Clay stream",
+    "completionPct": 100.0,
+    "dropoffPct": 0.0
+  },
+  {
+    "id": "p2",
+    "stageName": "After Filters",
+    "stageOrder": 2,
+    "count": 55812,
+    "subtitle": "Passed industry, employee range & domain filters",
+    "completionPct": 81.8,
+    "dropoffPct": 18.2
+  },
+  {
+    "id": "p3",
+    "stageName": "Deduped",
+    "stageOrder": 3,
+    "count": 51349,
+    "subtitle": "Duplicates removed & normalized",
+    "completionPct": 92.0,
+    "dropoffPct": 8.0
+  },
+  {
+    "id": "p4",
+    "stageName": "Ready for Enrichment",
+    "stageOrder": 4,
+    "count": 51349,
+    "subtitle": "Qualified net-new companies ready for SalesGPT CRM",
+    "completionPct": 100.0,
+    "dropoffPct": 0.0
+  }
+]
