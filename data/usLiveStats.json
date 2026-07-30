@@ -1,0 +1,12 @@
+{
+  "country": "United States",
+  "lastUpdated": "2026-07-29T11:23:04.877Z",
+  "totalCompanies": 1067000,
+  "techCompanies": 190393,
+  "nonTechCompanies": 876607,
+  "techRatioPercent": 17.8,
+  "nonTechRatioPercent": 82.2,
+  "totalEmployeesTech": 117924646,
+  "totalEmployeesNonTech": 448640291,
+  "companiesWith0OrNullEmployees": 148
+}

@@ -16,6 +16,7 @@ import {
   getDuplicatesData,
   getPipelineData,
 } from '@/services/dashboard';
+import { LiveQueryTesterCard } from '@/components/dashboard/LiveQueryTesterCard';
 import { Info } from 'lucide-react';
 
 export default function OverviewPage() {
@@ -51,11 +52,14 @@ export default function OverviewPage() {
             transition={{ duration: 0.25 }}
             className="space-y-6 pb-6"
           >
-            {/* Top Page Header matching screenshot */}
+            {/* Top Page Header */}
             <SectionHeader
               title="Data Overview"
               description="Compare data coverage, duplicates and pipeline health across sources"
             />
+
+            {/* Live Supabase Query Tester */}
+            <LiveQueryTesterCard />
 
             {/* Row 1: 4 Top KPI Cards */}
             <OverviewKpiCards metrics={metrics} />

@@ -3,6 +3,7 @@ import countriesRaw from '@/data/countries.json';
 import duplicatesRaw from '@/data/duplicates.json';
 import pipelineRaw from '@/data/pipeline.json';
 import fieldIssuesRaw from '@/data/fieldIssues.json';
+import { supabase } from '@/lib/supabaseClient';
 import {
   GlobalFilterState,
   OverviewMetrics,
@@ -14,6 +15,24 @@ import {
   FieldIssuesOverview,
   FilterOptions,
 } from '@/types';
+
+/**
+ * Executes live Supabase query on company_master table for US companies
+ */
+export async function fetchUSCompanyCountFromSupabase(): Promise<{ count: number; error: string | null }> {
+  try {
+    const res = await fetch('/api/supabase-us-count', { cache: 'no-store' });
+    const data = await res.json();
+
+    if (data.success && typeof data.count === 'number') {
+      return { count: data.count, error: null };
+    }
+
+    return { count: 0, error: data.error || 'Query failed' };
+  } catch (err: any) {
+    return { count: 0, error: err.message || 'Connection error' };
+  }
+}
 
 // Helper to filter country records based on current global filter state
 function filterCountries(records: CountryComparisonRecord[], filters?: Partial<GlobalFilterState>): CountryComparisonRecord[] {
