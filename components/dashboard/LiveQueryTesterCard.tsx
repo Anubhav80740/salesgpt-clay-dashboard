@@ -177,23 +177,25 @@ AND (employee_count IS NULL OR employee_count = 0);`,
 export function LiveQueryTesterCard() {
   const [selectedCountry, setSelectedCountry] = useState('United States');
   const [loadingState, setLoadingState] = useState<Record<string, boolean>>({});
+  const [isDailyScanning, setIsDailyScanning] = useState(false);
   const [results, setResults] = useState<Record<string, number>>({});
+  const [historyCounts, setHistoryCounts] = useState<Record<string, number>>({});
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [executedAt, setExecutedAt] = useState<Record<string, string>>({});
   const [isCached, setIsCached] = useState<Record<string, boolean>>({});
   const [showSql, setShowSql] = useState<Record<string, boolean>>({});
 
   // Load stored cache on mount & country change
-  useEffect(() => {
-    async function loadCache() {
-      // 1. Try browser localStorage first
-      const localKey = `queryCache_${selectedCountry}`;
-      const savedLocal = typeof window !== 'undefined' ? localStorage.getItem(localKey) : null;
+  const loadCache = React.useCallback(async () => {
+    let newResults: Record<string, number> = {};
+    let newExecutedAt: Record<string, string> = {};
+    let newHistoryCounts: Record<string, number> = {};
+    let newIsCached: Record<string, boolean> = {};
 
-      let newResults: Record<string, number> = {};
-      let newExecutedAt: Record<string, string> = {};
-      let newIsCached: Record<string, boolean> = {};
-
+    // 1. Read browser localStorage first
+    const localKey = `queryCache_${selectedCountry}`;
+    if (typeof window !== 'undefined') {
+      const savedLocal = localStorage.getItem(localKey);
       if (savedLocal) {
         try {
           const parsed = JSON.parse(savedLocal);
@@ -202,29 +204,38 @@ export function LiveQueryTesterCard() {
             newExecutedAt[key] = parsed[key].executedAt;
             newIsCached[key] = true;
           });
-        } catch (e) {
-          console.error('LocalStorage parse error:', e);
-        }
+        } catch (e) {}
       }
-
-      // 2. Fetch server disk JSON cache (data/liveQueryCache.json)
-      const diskCached = await fetchCachedQuerySuiteFromSupabase(selectedCountry);
-      if (diskCached && Object.keys(diskCached).length > 0) {
-        Object.keys(diskCached).forEach((key) => {
-          newResults[key] = diskCached[key].count;
-          newExecutedAt[key] = diskCached[key].executedAt;
-          newIsCached[key] = true;
-        });
-      }
-
-      setResults(newResults);
-      setExecutedAt(newExecutedAt);
-      setIsCached(newIsCached);
-      setErrors({});
     }
 
-    loadCache();
+    // 2. Read server disk JSON cache (data/liveQueryCache.json)
+    const diskCached = await fetchCachedQuerySuiteFromSupabase(selectedCountry);
+    if (diskCached && Object.keys(diskCached).length > 0) {
+      Object.keys(diskCached).forEach((key) => {
+        const item = diskCached[key] as any;
+        const val = item?.latest?.count ?? item?.count;
+        const time = item?.latest?.executedAt ?? item?.executedAt;
+        const histCount = Array.isArray(item?.history) ? item.history.length : (val !== undefined ? 1 : 0);
+
+        if (val !== undefined) {
+          newResults[key] = val;
+          newExecutedAt[key] = time;
+          newHistoryCounts[key] = histCount;
+          newIsCached[key] = true;
+        }
+      });
+    }
+
+    setResults(newResults);
+    setExecutedAt(newExecutedAt);
+    setHistoryCounts(newHistoryCounts);
+    setIsCached(newIsCached);
+    setErrors({});
   }, [selectedCountry]);
+
+  useEffect(() => {
+    loadCache();
+  }, [loadCache]);
 
   const handleTriggerQuery = async (queryKey: string) => {
     setLoadingState((prev) => ({ ...prev, [queryKey]: true }));
@@ -239,14 +250,18 @@ export function LiveQueryTesterCard() {
       setResults((prev) => ({ ...prev, [queryKey]: count }));
       setExecutedAt((prev) => ({ ...prev, [queryKey]: timeStr }));
       setIsCached((prev) => ({ ...prev, [queryKey]: false }));
+      setHistoryCounts((prev) => ({ ...prev, [queryKey]: (prev[queryKey] || 0) + 1 }));
 
-      // Save to localStorage
+      // Save to browser localStorage
       if (typeof window !== 'undefined') {
         const localKey = `queryCache_${selectedCountry}`;
         const savedLocal = localStorage.getItem(localKey);
         const parsed = savedLocal ? JSON.parse(savedLocal) : {};
         parsed[queryKey] = { count, executedAt: timeStr };
         localStorage.setItem(localKey, JSON.stringify(parsed));
+
+        // Notify dashboard components (Coverage table, KPI cards) to re-render immediately
+        window.dispatchEvent(new CustomEvent('queryCacheUpdated'));
       }
     }
 
@@ -255,6 +270,23 @@ export function LiveQueryTesterCard() {
 
   const handleTriggerAll = async () => {
     QUERIES.forEach((q) => handleTriggerQuery(q.key));
+  };
+
+  const handleRunDailyScan = async () => {
+    setIsDailyScanning(true);
+    try {
+      const res = await fetch('/api/supabase-query-suite?action=run_daily_scan', { cache: 'no-store' });
+      const data = await res.json();
+      if (data.success) {
+        await loadCache();
+        if (typeof window !== 'undefined') {
+          window.dispatchEvent(new CustomEvent('queryCacheUpdated'));
+        }
+      }
+    } catch (e) {
+      console.error('Daily scan failed:', e);
+    }
+    setIsDailyScanning(false);
   };
 
   const toggleSql = (key: string) => {
@@ -308,13 +340,13 @@ export function LiveQueryTesterCard() {
           >
             {isAnyLoading ? (
               <>
-                <RefreshCw className="w-4 h-4 animate-spin" />
-                <span>Executing All...</span>
+                <RefreshCw className="w-3.5 h-3.5 animate-spin" />
+                <span>Executing Queries...</span>
               </>
             ) : (
               <>
-                <Zap className="w-4 h-4 fill-current text-amber-300" />
-                <span>Trigger All 6 Queries</span>
+                <Zap className="w-3.5 h-3.5 fill-current text-amber-300" />
+                <span>Trigger {selectedCountry} Queries</span>
               </>
             )}
           </button>

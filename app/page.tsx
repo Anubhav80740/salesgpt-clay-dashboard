@@ -20,11 +20,44 @@ import { LiveQueryTesterCard } from '@/components/dashboard/LiveQueryTesterCard'
 import { Info } from 'lucide-react';
 
 export default function OverviewPage() {
+  const [cachedQueries, setCachedQueries] = React.useState<Record<string, Record<string, { count: number }>>>({});
+
+  const reloadCache = React.useCallback(async () => {
+    try {
+      const res = await fetch('/api/supabase-query-suite?cached=all', { cache: 'no-store' });
+      const data = await res.json();
+      if (data.success && data.queries) {
+        setCachedQueries(data.queries);
+      }
+    } catch (e) {
+      console.error('Failed to load live query cache:', e);
+    }
+  }, []);
+
+  React.useEffect(() => {
+    reloadCache();
+
+    // Trigger background daily auto-scan if today's snapshot file doesn't exist yet
+    fetch('/api/supabase-query-suite?action=auto_daily_check', { cache: 'no-store' })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success && !data.alreadyScannedToday) {
+          reloadCache();
+        }
+      })
+      .catch((err) => console.error('Daily check error:', err));
+
+    // Listen to query execution updates from LiveQueryTesterCard
+    const handleUpdate = () => reloadCache();
+    window.addEventListener('queryCacheUpdated', handleUpdate);
+    return () => window.removeEventListener('queryCacheUpdated', handleUpdate);
+  }, [reloadCache]);
+
   return (
     <DashboardShell>
       {({ filters, isRefreshing }) => {
-        const metrics = getOverviewMetrics(filters);
-        const countries = getCountryComparisonData(filters);
+        const metrics = getOverviewMetrics(filters, cachedQueries);
+        const countries = getCountryComparisonData(filters, cachedQueries);
         const duplicates = getDuplicatesData(filters);
         const pipelineStages = getPipelineData(filters);
 

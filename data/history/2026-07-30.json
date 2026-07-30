@@ -1,187 +1,36 @@
 {
-  "lastUpdated": "2026-07-30T11:52:05.865Z",
+  "date": "2026-07-30",
+  "lastUpdated": "2026-07-30T11:52:05.867Z",
   "queries": {
-    "United Kingdom": {
-      "non_tech_employee_headcount": {
-        "latest": {
-          "count": 261205549,
-          "executedAt": "5:06:37 pm",
-          "source": "RPC get_country_non_tech_employees('United Kingdom')",
-          "timestamp": 1785411397585
-        },
-        "count": 261205549,
-        "executedAt": "5:06:37 pm",
-        "source": "RPC get_country_non_tech_employees('United Kingdom')",
-        "history": [
-          {
-            "count": 261211405,
-            "executedAt": "4:13:56 pm",
-            "source": "RPC get_country_non_tech_employees('United Kingdom')",
-            "timestamp": 1785408236589
-          },
-          {
-            "count": 261205549,
-            "executedAt": "5:06:37 pm",
-            "source": "RPC get_country_non_tech_employees('United Kingdom')",
-            "timestamp": 1785411397585
-          }
-        ]
-      },
+    "United States": {
       "total_companies": {
         "latest": {
-          "count": 540006,
-          "executedAt": "5:06:22 pm",
-          "source": "RPC get_country_total_companies('United Kingdom')",
-          "timestamp": 1785411382124
+          "count": 3385993,
+          "executedAt": "5:12:08 pm",
+          "source": "RPC get_country_total_companies('United States')",
+          "timestamp": 1785411728445
         },
-        "count": 540006,
-        "executedAt": "5:06:22 pm",
-        "source": "RPC get_country_total_companies('United Kingdom')",
+        "count": 3385993,
+        "executedAt": "5:12:08 pm",
+        "source": "RPC get_country_total_companies('United States')",
         "history": [
           {
-            "count": 539963,
-            "executedAt": "4:13:56 pm",
-            "source": "RPC get_country_total_companies('United Kingdom')",
-            "timestamp": 1785408236980
+            "count": 3385987,
+            "executedAt": "4:53:23 pm",
+            "source": "RPC get_country_total_companies('United States')",
+            "timestamp": 1785410603887
           },
           {
-            "count": 540006,
-            "executedAt": "5:06:22 pm",
-            "source": "RPC get_country_total_companies('United Kingdom')",
-            "timestamp": 1785411382124
-          }
-        ]
-      },
-      "tech_employee_headcount": {
-        "latest": {
-          "count": 96092332,
-          "executedAt": "5:06:33 pm",
-          "source": "RPC get_country_tech_employees('United Kingdom')",
-          "timestamp": 1785411393638
-        },
-        "count": 96092332,
-        "executedAt": "5:06:33 pm",
-        "source": "RPC get_country_tech_employees('United Kingdom')",
-        "history": [
-          {
-            "count": 95928745,
-            "executedAt": "4:13:59 pm",
-            "source": "RPC get_country_tech_employees('United Kingdom')",
-            "timestamp": 1785408239439
+            "count": 3385993,
+            "executedAt": "5:05:20 pm",
+            "source": "RPC get_country_total_companies('United States')",
+            "timestamp": 1785411320498
           },
           {
-            "count": 96092332,
-            "executedAt": "5:06:33 pm",
-            "source": "RPC get_country_tech_employees('United Kingdom')",
-            "timestamp": 1785411393638
-          }
-        ]
-      },
-      "non_tech_companies": {
-        "latest": {
-          "count": 103737,
-          "executedAt": "5:06:30 pm",
-          "source": "RPC get_country_non_tech_companies('United Kingdom')",
-          "timestamp": 1785411390550
-        },
-        "count": 103737,
-        "executedAt": "5:06:30 pm",
-        "source": "RPC get_country_non_tech_companies('United Kingdom')",
-        "history": [
-          {
-            "count": 103752,
-            "executedAt": "4:14:03 pm",
-            "source": "RPC get_country_non_tech_companies('United Kingdom')",
-            "timestamp": 1785408243636
-          },
-          {
-            "count": 103737,
-            "executedAt": "5:06:30 pm",
-            "source": "RPC get_country_non_tech_companies('United Kingdom')",
-            "timestamp": 1785411390550
-          }
-        ]
-      },
-      "tech_companies": {
-        "latest": {
-          "count": 35813,
-          "executedAt": "5:06:26 pm",
-          "source": "RPC get_country_tech_companies('United Kingdom')",
-          "timestamp": 1785411386318
-        },
-        "count": 35813,
-        "executedAt": "5:06:26 pm",
-        "source": "RPC get_country_tech_companies('United Kingdom')",
-        "history": [
-          {
-            "count": 35705,
-            "executedAt": "4:14:03 pm",
-            "source": "RPC get_country_tech_companies('United Kingdom')",
-            "timestamp": 1785408243741
-          },
-          {
-            "count": 35813,
-            "executedAt": "5:06:26 pm",
-            "source": "RPC get_country_tech_companies('United Kingdom')",
-            "timestamp": 1785411386318
-          }
-        ]
-      },
-      "zero_employees": {
-        "latest": {
-          "count": 441731,
-          "executedAt": "5:06:47 pm",
-          "source": "RPC get_country_no_employees('United Kingdom')",
-          "timestamp": 1785411407998
-        },
-        "count": 441731,
-        "executedAt": "5:06:47 pm",
-        "source": "RPC get_country_no_employees('United Kingdom')",
-        "history": [
-          {
-            "count": 441791,
-            "executedAt": "4:14:03 pm",
-            "source": "RPC get_country_no_employees('United Kingdom')",
-            "timestamp": 1785408243783
-          },
-          {
-            "count": 441731,
-            "executedAt": "5:06:47 pm",
-            "source": "RPC get_country_no_employees('United Kingdom')",
-            "timestamp": 1785411407998
-          }
-        ]
-      }
-    },
-    "United States": {
-      "tech_companies": {
-        "latest": {
-          "count": 146060,
-          "executedAt": "5:12:16 pm",
-          "source": "RPC get_country_tech_companies('United States')",
-          "timestamp": 1785411736137
-        },
-        "count": 146060,
-        "executedAt": "5:12:16 pm",
-        "source": "RPC get_country_tech_companies('United States')",
-        "history": [
-          {
-            "count": 146051,
-            "executedAt": "4:53:31 pm",
-            "source": "RPC get_country_tech_companies('United States')",
-            "timestamp": 1785410611894
-          },
-          {
-            "count": 146060,
-            "executedAt": "5:05:24 pm",
-            "source": "RPC get_country_tech_companies('United States')",
-            "timestamp": 1785411324990
-          },
-          {
-            "count": 146060,
-            "executedAt": "5:12:16 pm",
-            "source": "RPC get_country_tech_companies('United States')",
-            "timestamp": 1785411736137
+            "count": 3385993,
+            "executedAt": "5:12:08 pm",
+            "source": "RPC get_country_total_companies('United States')",
+            "timestamp": 1785411728445
           }
         ]
       },
@@ -200,7 +49,7 @@
             "count": 394367,
             "executedAt": "4:53:24 pm",
             "source": "RPC get_country_non_tech_companies('United States')",
-            "timestamp": 1785410604494
+            "timestamp": 1785410604496
           },
           {
             "count": 394367,
@@ -213,37 +62,6 @@
             "executedAt": "5:12:16 pm",
             "source": "RPC get_country_non_tech_companies('United States')",
             "timestamp": 1785411736029
-          }
-        ]
-      },
-      "tech_employee_headcount": {
-        "latest": {
-          "count": 419421204,
-          "executedAt": "5:12:11 pm",
-          "source": "RPC get_country_tech_employees('United States')",
-          "timestamp": 1785411731532
-        },
-        "count": 419421204,
-        "executedAt": "5:12:11 pm",
-        "source": "RPC get_country_tech_employees('United States')",
-        "history": [
-          {
-            "count": 419420005,
-            "executedAt": "4:53:26 pm",
-            "source": "RPC get_country_tech_employees('United States')",
-            "timestamp": 1785410606713
-          },
-          {
-            "count": 419421204,
-            "executedAt": "5:05:33 pm",
-            "source": "RPC get_country_tech_employees('United States')",
-            "timestamp": 1785411333174
-          },
-          {
-            "count": 419421204,
-            "executedAt": "5:12:11 pm",
-            "source": "RPC get_country_tech_employees('United States')",
-            "timestamp": 1785411731532
           }
         ]
       },
@@ -262,7 +80,7 @@
             "count": 1044031201,
             "executedAt": "4:53:26 pm",
             "source": "RPC get_country_non_tech_employees('United States')",
-            "timestamp": 1785410606707
+            "timestamp": 1785410606709
           },
           {
             "count": 1044031201,
@@ -278,34 +96,65 @@
           }
         ]
       },
-      "total_companies": {
+      "tech_employee_headcount": {
         "latest": {
-          "count": 3385993,
-          "executedAt": "5:12:08 pm",
-          "source": "RPC get_country_total_companies('United States')",
-          "timestamp": 1785411728445
+          "count": 419421204,
+          "executedAt": "5:12:11 pm",
+          "source": "RPC get_country_tech_employees('United States')",
+          "timestamp": 1785411731532
         },
-        "count": 3385993,
-        "executedAt": "5:12:08 pm",
-        "source": "RPC get_country_total_companies('United States')",
+        "count": 419421204,
+        "executedAt": "5:12:11 pm",
+        "source": "RPC get_country_tech_employees('United States')",
         "history": [
           {
-            "count": 3385987,
-            "executedAt": "4:53:23 pm",
-            "source": "RPC get_country_total_companies('United States')",
-            "timestamp": 1785410603884
+            "count": 419420005,
+            "executedAt": "4:53:26 pm",
+            "source": "RPC get_country_tech_employees('United States')",
+            "timestamp": 1785410606714
           },
           {
-            "count": 3385993,
-            "executedAt": "5:05:20 pm",
-            "source": "RPC get_country_total_companies('United States')",
-            "timestamp": 1785411320498
+            "count": 419421204,
+            "executedAt": "5:05:33 pm",
+            "source": "RPC get_country_tech_employees('United States')",
+            "timestamp": 1785411333174
           },
           {
-            "count": 3385993,
-            "executedAt": "5:12:08 pm",
-            "source": "RPC get_country_total_companies('United States')",
-            "timestamp": 1785411728445
+            "count": 419421204,
+            "executedAt": "5:12:11 pm",
+            "source": "RPC get_country_tech_employees('United States')",
+            "timestamp": 1785411731532
+          }
+        ]
+      },
+      "tech_companies": {
+        "latest": {
+          "count": 146060,
+          "executedAt": "5:12:16 pm",
+          "source": "RPC get_country_tech_companies('United States')",
+          "timestamp": 1785411736137
+        },
+        "count": 146060,
+        "executedAt": "5:12:16 pm",
+        "source": "RPC get_country_tech_companies('United States')",
+        "history": [
+          {
+            "count": 146051,
+            "executedAt": "4:53:31 pm",
+            "source": "RPC get_country_tech_companies('United States')",
+            "timestamp": 1785410611897
+          },
+          {
+            "count": 146060,
+            "executedAt": "5:05:24 pm",
+            "source": "RPC get_country_tech_companies('United States')",
+            "timestamp": 1785411324990
+          },
+          {
+            "count": 146060,
+            "executedAt": "5:12:16 pm",
+            "source": "RPC get_country_tech_companies('United States')",
+            "timestamp": 1785411736137
           }
         ]
       },
@@ -324,7 +173,7 @@
             "count": 3049011,
             "executedAt": "4:53:31 pm",
             "source": "RPC get_country_no_employees('United States')",
-            "timestamp": 1785410611955
+            "timestamp": 1785410611958
           },
           {
             "count": 3049008,
@@ -341,158 +190,6 @@
         ]
       }
     },
-    "Canada": {
-      "total_companies": {
-        "latest": {
-          "count": 226146,
-          "executedAt": "5:13:41 pm",
-          "source": "RPC get_country_total_companies('Canada')",
-          "timestamp": 1785411821538
-        },
-        "count": 226146,
-        "executedAt": "5:13:41 pm",
-        "source": "RPC get_country_total_companies('Canada')",
-        "history": [
-          {
-            "count": 226123,
-            "executedAt": "4:14:26 pm",
-            "source": "RPC get_country_total_companies('Canada')",
-            "timestamp": 1785408266165
-          },
-          {
-            "count": 226146,
-            "executedAt": "5:13:41 pm",
-            "source": "RPC get_country_total_companies('Canada')",
-            "timestamp": 1785411821538
-          }
-        ]
-      },
-      "non_tech_companies": {
-        "latest": {
-          "count": 49036,
-          "executedAt": "5:13:41 pm",
-          "source": "RPC get_country_non_tech_companies('Canada')",
-          "timestamp": 1785411821529
-        },
-        "count": 49036,
-        "executedAt": "5:13:41 pm",
-        "source": "RPC get_country_non_tech_companies('Canada')",
-        "history": [
-          {
-            "count": 49044,
-            "executedAt": "4:14:26 pm",
-            "source": "RPC get_country_non_tech_companies('Canada')",
-            "timestamp": 1785408266215
-          },
-          {
-            "count": 49036,
-            "executedAt": "5:13:41 pm",
-            "source": "RPC get_country_non_tech_companies('Canada')",
-            "timestamp": 1785411821529
-          }
-        ]
-      },
-      "non_tech_employee_headcount": {
-        "latest": {
-          "count": 108590086,
-          "executedAt": "5:13:43 pm",
-          "source": "RPC get_country_non_tech_employees('Canada')",
-          "timestamp": 1785411823270
-        },
-        "count": 108590086,
-        "executedAt": "5:13:43 pm",
-        "source": "RPC get_country_non_tech_employees('Canada')",
-        "history": [
-          {
-            "count": 108590846,
-            "executedAt": "4:14:26 pm",
-            "source": "RPC get_country_non_tech_employees('Canada')",
-            "timestamp": 1785408266267
-          },
-          {
-            "count": 108590086,
-            "executedAt": "5:13:43 pm",
-            "source": "RPC get_country_non_tech_employees('Canada')",
-            "timestamp": 1785411823270
-          }
-        ]
-      },
-      "tech_employee_headcount": {
-        "latest": {
-          "count": 36098248,
-          "executedAt": "5:13:41 pm",
-          "source": "RPC get_country_tech_employees('Canada')",
-          "timestamp": 1785411821733
-        },
-        "count": 36098248,
-        "executedAt": "5:13:41 pm",
-        "source": "RPC get_country_tech_employees('Canada')",
-        "history": [
-          {
-            "count": 35740473,
-            "executedAt": "4:14:27 pm",
-            "source": "RPC get_country_tech_employees('Canada')",
-            "timestamp": 1785408267705
-          },
-          {
-            "count": 36098248,
-            "executedAt": "5:13:41 pm",
-            "source": "RPC get_country_tech_employees('Canada')",
-            "timestamp": 1785411821733
-          }
-        ]
-      },
-      "tech_companies": {
-        "latest": {
-          "count": 15144,
-          "executedAt": "5:13:46 pm",
-          "source": "RPC get_country_tech_companies('Canada')",
-          "timestamp": 1785411826169
-        },
-        "count": 15144,
-        "executedAt": "5:13:46 pm",
-        "source": "RPC get_country_tech_companies('Canada')",
-        "history": [
-          {
-            "count": 15088,
-            "executedAt": "4:14:30 pm",
-            "source": "RPC get_country_tech_companies('Canada')",
-            "timestamp": 1785408270878
-          },
-          {
-            "count": 15144,
-            "executedAt": "5:13:46 pm",
-            "source": "RPC get_country_tech_companies('Canada')",
-            "timestamp": 1785411826169
-          }
-        ]
-      },
-      "zero_employees": {
-        "latest": {
-          "count": 181426,
-          "executedAt": "5:13:47 pm",
-          "source": "RPC get_country_no_employees('Canada')",
-          "timestamp": 1785411827577
-        },
-        "count": 181426,
-        "executedAt": "5:13:47 pm",
-        "source": "RPC get_country_no_employees('Canada')",
-        "history": [
-          {
-            "count": 181460,
-            "executedAt": "4:14:31 pm",
-            "source": "RPC get_country_no_employees('Canada')",
-            "timestamp": 1785408271489
-          },
-          {
-            "count": 181426,
-            "executedAt": "5:13:47 pm",
-            "source": "RPC get_country_no_employees('Canada')",
-            "timestamp": 1785411827577
-          }
-        ]
-      }
-    },
     "India": {
       "total_companies": {
         "latest": {
@@ -505,12 +202,6 @@
         "executedAt": "5:06:06 pm",
         "source": "RPC get_country_total_companies('India')",
         "history": [
-          {
-            "count": 924583,
-            "executedAt": "4:14:39 pm",
-            "source": "RPC get_country_total_companies('India')",
-            "timestamp": 1785408279990
-          },
           {
             "count": 924834,
             "executedAt": "5:05:51 pm",
@@ -647,6 +338,122 @@
             "executedAt": "5:06:01 pm",
             "source": "RPC get_country_non_tech_companies('India')",
             "timestamp": 1785411361475
+          }
+        ]
+      }
+    },
+    "United Kingdom": {
+      "total_companies": {
+        "latest": {
+          "count": 540006,
+          "executedAt": "5:06:22 pm",
+          "source": "RPC get_country_total_companies('United Kingdom')",
+          "timestamp": 1785411382124
+        },
+        "count": 540006,
+        "executedAt": "5:06:22 pm",
+        "source": "RPC get_country_total_companies('United Kingdom')",
+        "history": [
+          {
+            "count": 540006,
+            "executedAt": "5:06:22 pm",
+            "source": "RPC get_country_total_companies('United Kingdom')",
+            "timestamp": 1785411382124
+          }
+        ]
+      },
+      "tech_companies": {
+        "latest": {
+          "count": 35813,
+          "executedAt": "5:06:26 pm",
+          "source": "RPC get_country_tech_companies('United Kingdom')",
+          "timestamp": 1785411386318
+        },
+        "count": 35813,
+        "executedAt": "5:06:26 pm",
+        "source": "RPC get_country_tech_companies('United Kingdom')",
+        "history": [
+          {
+            "count": 35813,
+            "executedAt": "5:06:26 pm",
+            "source": "RPC get_country_tech_companies('United Kingdom')",
+            "timestamp": 1785411386318
+          }
+        ]
+      },
+      "non_tech_companies": {
+        "latest": {
+          "count": 103737,
+          "executedAt": "5:06:30 pm",
+          "source": "RPC get_country_non_tech_companies('United Kingdom')",
+          "timestamp": 1785411390550
+        },
+        "count": 103737,
+        "executedAt": "5:06:30 pm",
+        "source": "RPC get_country_non_tech_companies('United Kingdom')",
+        "history": [
+          {
+            "count": 103737,
+            "executedAt": "5:06:30 pm",
+            "source": "RPC get_country_non_tech_companies('United Kingdom')",
+            "timestamp": 1785411390550
+          }
+        ]
+      },
+      "tech_employee_headcount": {
+        "latest": {
+          "count": 96092332,
+          "executedAt": "5:06:33 pm",
+          "source": "RPC get_country_tech_employees('United Kingdom')",
+          "timestamp": 1785411393638
+        },
+        "count": 96092332,
+        "executedAt": "5:06:33 pm",
+        "source": "RPC get_country_tech_employees('United Kingdom')",
+        "history": [
+          {
+            "count": 96092332,
+            "executedAt": "5:06:33 pm",
+            "source": "RPC get_country_tech_employees('United Kingdom')",
+            "timestamp": 1785411393638
+          }
+        ]
+      },
+      "non_tech_employee_headcount": {
+        "latest": {
+          "count": 261205549,
+          "executedAt": "5:06:37 pm",
+          "source": "RPC get_country_non_tech_employees('United Kingdom')",
+          "timestamp": 1785411397585
+        },
+        "count": 261205549,
+        "executedAt": "5:06:37 pm",
+        "source": "RPC get_country_non_tech_employees('United Kingdom')",
+        "history": [
+          {
+            "count": 261205549,
+            "executedAt": "5:06:37 pm",
+            "source": "RPC get_country_non_tech_employees('United Kingdom')",
+            "timestamp": 1785411397585
+          }
+        ]
+      },
+      "zero_employees": {
+        "latest": {
+          "count": 441731,
+          "executedAt": "5:06:47 pm",
+          "source": "RPC get_country_no_employees('United Kingdom')",
+          "timestamp": 1785411407998
+        },
+        "count": 441731,
+        "executedAt": "5:06:47 pm",
+        "source": "RPC get_country_no_employees('United Kingdom')",
+        "history": [
+          {
+            "count": 441731,
+            "executedAt": "5:06:47 pm",
+            "source": "RPC get_country_no_employees('United Kingdom')",
+            "timestamp": 1785411407998
           }
         ]
       }
@@ -1879,6 +1686,122 @@
             "executedAt": "5:11:35 pm",
             "source": "RPC get_country_no_employees('New Zealand')",
             "timestamp": 1785411695243
+          }
+        ]
+      }
+    },
+    "Canada": {
+      "non_tech_companies": {
+        "latest": {
+          "count": 49036,
+          "executedAt": "5:13:41 pm",
+          "source": "RPC get_country_non_tech_companies('Canada')",
+          "timestamp": 1785411821529
+        },
+        "count": 49036,
+        "executedAt": "5:13:41 pm",
+        "source": "RPC get_country_non_tech_companies('Canada')",
+        "history": [
+          {
+            "count": 49036,
+            "executedAt": "5:13:41 pm",
+            "source": "RPC get_country_non_tech_companies('Canada')",
+            "timestamp": 1785411821529
+          }
+        ]
+      },
+      "total_companies": {
+        "latest": {
+          "count": 226146,
+          "executedAt": "5:13:41 pm",
+          "source": "RPC get_country_total_companies('Canada')",
+          "timestamp": 1785411821538
+        },
+        "count": 226146,
+        "executedAt": "5:13:41 pm",
+        "source": "RPC get_country_total_companies('Canada')",
+        "history": [
+          {
+            "count": 226146,
+            "executedAt": "5:13:41 pm",
+            "source": "RPC get_country_total_companies('Canada')",
+            "timestamp": 1785411821538
+          }
+        ]
+      },
+      "tech_employee_headcount": {
+        "latest": {
+          "count": 36098248,
+          "executedAt": "5:13:41 pm",
+          "source": "RPC get_country_tech_employees('Canada')",
+          "timestamp": 1785411821733
+        },
+        "count": 36098248,
+        "executedAt": "5:13:41 pm",
+        "source": "RPC get_country_tech_employees('Canada')",
+        "history": [
+          {
+            "count": 36098248,
+            "executedAt": "5:13:41 pm",
+            "source": "RPC get_country_tech_employees('Canada')",
+            "timestamp": 1785411821733
+          }
+        ]
+      },
+      "non_tech_employee_headcount": {
+        "latest": {
+          "count": 108590086,
+          "executedAt": "5:13:43 pm",
+          "source": "RPC get_country_non_tech_employees('Canada')",
+          "timestamp": 1785411823270
+        },
+        "count": 108590086,
+        "executedAt": "5:13:43 pm",
+        "source": "RPC get_country_non_tech_employees('Canada')",
+        "history": [
+          {
+            "count": 108590086,
+            "executedAt": "5:13:43 pm",
+            "source": "RPC get_country_non_tech_employees('Canada')",
+            "timestamp": 1785411823270
+          }
+        ]
+      },
+      "tech_companies": {
+        "latest": {
+          "count": 15144,
+          "executedAt": "5:13:46 pm",
+          "source": "RPC get_country_tech_companies('Canada')",
+          "timestamp": 1785411826169
+        },
+        "count": 15144,
+        "executedAt": "5:13:46 pm",
+        "source": "RPC get_country_tech_companies('Canada')",
+        "history": [
+          {
+            "count": 15144,
+            "executedAt": "5:13:46 pm",
+            "source": "RPC get_country_tech_companies('Canada')",
+            "timestamp": 1785411826169
+          }
+        ]
+      },
+      "zero_employees": {
+        "latest": {
+          "count": 181426,
+          "executedAt": "5:13:47 pm",
+          "source": "RPC get_country_no_employees('Canada')",
+          "timestamp": 1785411827577
+        },
+        "count": 181426,
+        "executedAt": "5:13:47 pm",
+        "source": "RPC get_country_no_employees('Canada')",
+        "history": [
+          {
+            "count": 181426,
+            "executedAt": "5:13:47 pm",
+            "source": "RPC get_country_no_employees('Canada')",
+            "timestamp": 1785411827577
           }
         ]
       }

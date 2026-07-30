@@ -55,6 +55,20 @@ export async function fetchCachedQuerySuiteFromSupabase(country: string = 'Unite
   return {};
 }
 
+export async function fetchAllCachedQueriesFromSupabase(): Promise<Record<string, Record<string, { count: number; executedAt: string; source: string }>>> {
+  try {
+    const res = await fetch(`/api/supabase-query-suite?cached=all`, { cache: 'no-store' });
+    const data = await res.json();
+
+    if (data.success && data.queries) {
+      return data.queries;
+    }
+  } catch (e) {
+    console.error('Fetch all cache error:', e);
+  }
+  return {};
+}
+
 // Helper to filter country records based on current global filter state
 function filterCountries(records: CountryComparisonRecord[], filters?: Partial<GlobalFilterState>): CountryComparisonRecord[] {
   if (!filters) return records;
@@ -71,19 +85,87 @@ function filterCountries(records: CountryComparisonRecord[], filters?: Partial<G
   });
 }
 
+export async function triggerDailyAutoScanFromSupabase(): Promise<{ success: boolean; message?: string; error?: string }> {
+  try {
+    const res = await fetch('/api/supabase-query-suite?action=run_daily_scan', { cache: 'no-store' });
+    const data = await res.json();
+    return { success: data.success, message: data.message, error: data.error };
+  } catch (err: any) {
+    return { success: false, error: err.message || 'Auto-scan request failed' };
+  }
+}
+
+/**
+ * Service Layer: Returns computed country list for Country Comparison Page.
+ * Dynamically merges queried values from data/liveQueryCache.json!
+ * STRICT: Only uses tech_companies count for this table (no fallback to total_companies).
+ */
+export function getCountryComparisonData(
+  filters?: Partial<GlobalFilterState>,
+  cachedQueries?: Record<string, Record<string, any>>
+): CountryComparisonRecord[] {
+  const filtered = filterCountries(countriesRaw as CountryComparisonRecord[], filters);
+
+  const rawMapped = filtered.map((record) => {
+    // Check if live query cache has a tech_companies count for this country
+    const countryCache = cachedQueries?.[record.country];
+    const techObj = countryCache?.tech_companies;
+
+    // Read latest.count or count safely — STRICTLY tech_companies ONLY
+    const liveTechCount = techObj?.latest?.count ?? techObj?.count;
+
+    // If tech_companies has not been queried for this country, use baseline or 0 (NO total_companies fallback)
+    const salesgpt = liveTechCount !== undefined ? liveTechCount : (record.salesgpt || 0);
+    const clayClean = record.clayClean;
+    const overlap = Math.min(salesgpt, clayClean);
+    const clayOnly = Math.max(0, clayClean - overlap);
+    const salesgptOnly = Math.max(0, salesgpt - overlap);
+    const coveragePct = clayClean > 0 ? Number(((overlap / clayClean) * 100).toFixed(1)) : 0;
+
+    let status: 'Excellent' | 'Good' | 'Needs Attention' | 'Poor' = 'Good';
+    if (coveragePct >= 80) status = 'Excellent';
+    else if (coveragePct >= 60) status = 'Good';
+    else if (coveragePct >= 40) status = 'Needs Attention';
+    else status = 'Poor';
+
+    return {
+      ...record,
+      salesgpt,
+      clayClean,
+      overlap,
+      clayOnly,
+      salesgptOnly,
+      coveragePct,
+      status,
+    };
+  });
+
+  const grandTotalSalesGPT = rawMapped.reduce((acc, c) => acc + c.salesgpt, 0);
+  const grandTotalClayClean = rawMapped.reduce((acc, c) => acc + c.clayClean, 0);
+
+  return rawMapped.map((r) => ({
+    ...r,
+    salesgptPct: grandTotalSalesGPT > 0 ? Number(((r.salesgpt / grandTotalSalesGPT) * 100).toFixed(1)) : 0,
+    clayPct: grandTotalClayClean > 0 ? Number(((r.clayClean / grandTotalClayClean) * 100).toFixed(1)) : 0,
+    overlapPct: r.clayClean > 0 ? Number(((r.overlap / r.clayClean) * 100).toFixed(1)) : 0,
+  }));
+}
+
 /**
  * Service Layer: Returns pre-computed metrics for Overview Page.
- * TODO: Replace mock JSON calculation with SQL aggregate query (e.g. SELECT COUNT(*), SUM(...) FROM companies WHERE ...)
+ * Dynamically computes values using live queried counts if available!
  */
-export function getOverviewMetrics(filters?: Partial<GlobalFilterState>): OverviewMetrics {
-  const filteredCountries = filterCountries(countriesRaw as CountryComparisonRecord[], filters);
+export function getOverviewMetrics(
+  filters?: Partial<GlobalFilterState>,
+  cachedQueries?: Record<string, Record<string, { count: number }>>
+): OverviewMetrics {
+  const filteredCountries = getCountryComparisonData(filters, cachedQueries);
 
   const totalSalesGPT = filteredCountries.reduce((acc, c) => acc + c.salesgpt, 0);
   const matchedCompanies = filteredCountries.reduce((acc, c) => acc + c.overlap, 0);
   const clayOnlyNewCompanies = filteredCountries.reduce((acc, c) => acc + c.clayOnly, 0);
   const salesgptOnly = filteredCountries.reduce((acc, c) => acc + c.salesgptOnly, 0);
   const totalClayClean = filteredCountries.reduce((acc, c) => acc + c.clayClean, 0);
-  const totalClayRaw = filteredCountries.reduce((acc, c) => acc + c.clayRaw, 0);
 
   const totalClay = totalClayClean || overviewRaw.totalClay;
   const difference = totalClay - totalSalesGPT;
@@ -114,30 +196,6 @@ export function getOverviewMetrics(filters?: Partial<GlobalFilterState>): Overvi
       clayOnlyPct: Number(clayOnlyPct.toFixed(1)),
     },
   };
-}
-
-/**
- * Service Layer: Returns computed country list for Country Comparison Page.
- * Recalculates coverage % and status dynamically.
- * TODO: Replace with `SELECT country, SUM(salesgpt_cnt), SUM(clay_clean)... FROM country_stats GROUP BY country`
- */
-export function getCountryComparisonData(filters?: Partial<GlobalFilterState>): CountryComparisonRecord[] {
-  const filtered = filterCountries(countriesRaw as CountryComparisonRecord[], filters);
-
-  return filtered.map((record) => {
-    const coveragePct = record.clayClean > 0 ? Number(((record.overlap / record.clayClean) * 100).toFixed(1)) : 0;
-    let status: 'Excellent' | 'Good' | 'Needs Attention' | 'Poor' = 'Good';
-    if (coveragePct >= 80) status = 'Excellent';
-    else if (coveragePct >= 60) status = 'Good';
-    else if (coveragePct >= 40) status = 'Needs Attention';
-    else status = 'Poor';
-
-    return {
-      ...record,
-      coveragePct,
-      status,
-    };
-  });
 }
 
 /**
