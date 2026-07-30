@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Database,
   Play,
@@ -16,8 +16,9 @@ import {
   Code2,
   Zap,
   Globe,
+  HardDrive,
 } from 'lucide-react';
-import { fetchQuerySuiteCountFromSupabase } from '@/services/dashboard';
+import { fetchQuerySuiteCountFromSupabase, fetchCachedQuerySuiteFromSupabase } from '@/services/dashboard';
 import { formatNumber } from '@/utils/formatters';
 
 interface QueryItem {
@@ -179,7 +180,51 @@ export function LiveQueryTesterCard() {
   const [results, setResults] = useState<Record<string, number>>({});
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [executedAt, setExecutedAt] = useState<Record<string, string>>({});
+  const [isCached, setIsCached] = useState<Record<string, boolean>>({});
   const [showSql, setShowSql] = useState<Record<string, boolean>>({});
+
+  // Load stored cache on mount & country change
+  useEffect(() => {
+    async function loadCache() {
+      // 1. Try browser localStorage first
+      const localKey = `queryCache_${selectedCountry}`;
+      const savedLocal = typeof window !== 'undefined' ? localStorage.getItem(localKey) : null;
+
+      let newResults: Record<string, number> = {};
+      let newExecutedAt: Record<string, string> = {};
+      let newIsCached: Record<string, boolean> = {};
+
+      if (savedLocal) {
+        try {
+          const parsed = JSON.parse(savedLocal);
+          Object.keys(parsed).forEach((key) => {
+            newResults[key] = parsed[key].count;
+            newExecutedAt[key] = parsed[key].executedAt;
+            newIsCached[key] = true;
+          });
+        } catch (e) {
+          console.error('LocalStorage parse error:', e);
+        }
+      }
+
+      // 2. Fetch server disk JSON cache (data/liveQueryCache.json)
+      const diskCached = await fetchCachedQuerySuiteFromSupabase(selectedCountry);
+      if (diskCached && Object.keys(diskCached).length > 0) {
+        Object.keys(diskCached).forEach((key) => {
+          newResults[key] = diskCached[key].count;
+          newExecutedAt[key] = diskCached[key].executedAt;
+          newIsCached[key] = true;
+        });
+      }
+
+      setResults(newResults);
+      setExecutedAt(newExecutedAt);
+      setIsCached(newIsCached);
+      setErrors({});
+    }
+
+    loadCache();
+  }, [selectedCountry]);
 
   const handleTriggerQuery = async (queryKey: string) => {
     setLoadingState((prev) => ({ ...prev, [queryKey]: true }));
@@ -190,8 +235,19 @@ export function LiveQueryTesterCard() {
     if (error) {
       setErrors((prev) => ({ ...prev, [queryKey]: error }));
     } else {
+      const timeStr = new Date().toLocaleTimeString();
       setResults((prev) => ({ ...prev, [queryKey]: count }));
-      setExecutedAt((prev) => ({ ...prev, [queryKey]: new Date().toLocaleTimeString() }));
+      setExecutedAt((prev) => ({ ...prev, [queryKey]: timeStr }));
+      setIsCached((prev) => ({ ...prev, [queryKey]: false }));
+
+      // Save to localStorage
+      if (typeof window !== 'undefined') {
+        const localKey = `queryCache_${selectedCountry}`;
+        const savedLocal = localStorage.getItem(localKey);
+        const parsed = savedLocal ? JSON.parse(savedLocal) : {};
+        parsed[queryKey] = { count, executedAt: timeStr };
+        localStorage.setItem(localKey, JSON.stringify(parsed));
+      }
     }
 
     setLoadingState((prev) => ({ ...prev, [queryKey]: false }));
@@ -218,12 +274,12 @@ export function LiveQueryTesterCard() {
           <div>
             <h2 className="text-base font-extrabold text-slate-900 flex items-center gap-2">
               <span>Live Supabase Database Query Suite</span>
-              <span className="px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 text-[10px] font-bold border border-blue-100">
-                Dynamic Country Filter
+              <span className="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-[10px] font-bold border border-emerald-200 flex items-center gap-1">
+                <HardDrive className="w-3 h-3" /> Auto-Saved JSON Cache
               </span>
             </h2>
             <p className="text-xs text-slate-500">
-              Target Table: <code className="font-mono text-blue-700 font-bold bg-slate-100 px-1.5 py-0.5 rounded">company_master</code>
+              Target Table: <code className="font-mono text-blue-700 font-bold bg-slate-100 px-1.5 py-0.5 rounded">company_master</code> | File: <code className="font-mono text-emerald-700 font-bold bg-emerald-50 px-1 py-0.5 rounded border border-emerald-100">data/liveQueryCache.json</code>
             </p>
           </div>
         </div>
@@ -273,6 +329,7 @@ export function LiveQueryTesterCard() {
           const countResult = results[q.key];
           const err = errors[q.key];
           const time = executedAt[q.key];
+          const cachedFlag = isCached[q.key];
           const isSqlVisible = showSql[q.key];
           const sqlSnippet = q.getSql(selectedCountry);
 
@@ -325,7 +382,10 @@ export function LiveQueryTesterCard() {
                       Count: <strong className="font-extrabold text-slate-900 text-xs ml-1">{formatNumber(countResult)}</strong>
                     </span>
                   </div>
-                  <span className="text-[9px] text-emerald-700 font-mono shrink-0">{time}</span>
+                  <div className="flex items-center gap-1 text-[9px] text-emerald-700 font-mono shrink-0">
+                    {cachedFlag && <span className="px-1.5 py-0.5 rounded bg-emerald-100 font-bold">Stored</span>}
+                    <span>{time}</span>
+                  </div>
                 </div>
               )}
 
@@ -350,7 +410,7 @@ export function LiveQueryTesterCard() {
                 ) : (
                   <>
                     <Play className="w-3 h-3 fill-current text-blue-600" />
-                    <span>Trigger Query</span>
+                    <span>{countResult !== undefined ? 'Re-Trigger Query' : 'Trigger Query'}</span>
                   </>
                 )}
               </button>

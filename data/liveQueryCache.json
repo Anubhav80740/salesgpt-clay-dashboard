@@ -1,0 +1,127 @@
+{
+  "lastUpdated": "2026-07-30T10:44:39.990Z",
+  "queries": {
+    "United Kingdom": {
+      "non_tech_employee_headcount": {
+        "count": 261211405,
+        "executedAt": "4:13:56 pm",
+        "source": "RPC get_country_non_tech_employees('United Kingdom')",
+        "timestamp": 1785408236589
+      },
+      "total_companies": {
+        "count": 539963,
+        "executedAt": "4:13:56 pm",
+        "source": "RPC get_country_total_companies('United Kingdom')",
+        "timestamp": 1785408236980
+      },
+      "tech_employee_headcount": {
+        "count": 95928745,
+        "executedAt": "4:13:59 pm",
+        "source": "RPC get_country_tech_employees('United Kingdom')",
+        "timestamp": 1785408239439
+      },
+      "non_tech_companies": {
+        "count": 103752,
+        "executedAt": "4:14:03 pm",
+        "source": "RPC get_country_non_tech_companies('United Kingdom')",
+        "timestamp": 1785408243636
+      },
+      "tech_companies": {
+        "count": 35705,
+        "executedAt": "4:14:03 pm",
+        "source": "RPC get_country_tech_companies('United Kingdom')",
+        "timestamp": 1785408243741
+      },
+      "zero_employees": {
+        "count": 441791,
+        "executedAt": "4:14:03 pm",
+        "source": "RPC get_country_no_employees('United Kingdom')",
+        "timestamp": 1785408243783
+      }
+    },
+    "United States": {
+      "tech_companies": {
+        "count": 145384,
+        "executedAt": "4:14:11 pm",
+        "source": "RPC get_country_tech_companies('United States')",
+        "timestamp": 1785408251115
+      },
+      "non_tech_companies": {
+        "count": 394416,
+        "executedAt": "4:14:11 pm",
+        "source": "RPC get_country_non_tech_companies('United States')",
+        "timestamp": 1785408251317
+      },
+      "tech_employee_headcount": {
+        "count": 418633187,
+        "executedAt": "4:14:12 pm",
+        "source": "RPC get_country_tech_employees('United States')",
+        "timestamp": 1785408252343
+      },
+      "non_tech_employee_headcount": {
+        "count": 1044053319,
+        "executedAt": "4:14:14 pm",
+        "source": "RPC get_country_non_tech_employees('United States')",
+        "timestamp": 1785408254037
+      },
+      "total_companies": {
+        "count": 3385614,
+        "executedAt": "4:14:15 pm",
+        "source": "RPC get_country_total_companies('United States')",
+        "timestamp": 1785408255926
+      },
+      "zero_employees": {
+        "count": 3049320,
+        "executedAt": "4:14:16 pm",
+        "source": "RPC get_country_no_employees('United States')",
+        "timestamp": 1785408256437
+      }
+    },
+    "Canada": {
+      "total_companies": {
+        "count": 226123,
+        "executedAt": "4:14:26 pm",
+        "source": "RPC get_country_total_companies('Canada')",
+        "timestamp": 1785408266165
+      },
+      "non_tech_companies": {
+        "count": 49044,
+        "executedAt": "4:14:26 pm",
+        "source": "RPC get_country_non_tech_companies('Canada')",
+        "timestamp": 1785408266215
+      },
+      "non_tech_employee_headcount": {
+        "count": 108590846,
+        "executedAt": "4:14:26 pm",
+        "source": "RPC get_country_non_tech_employees('Canada')",
+        "timestamp": 1785408266267
+      },
+      "tech_employee_headcount": {
+        "count": 35740473,
+        "executedAt": "4:14:27 pm",
+        "source": "RPC get_country_tech_employees('Canada')",
+        "timestamp": 1785408267705
+      },
+      "tech_companies": {
+        "count": 15088,
+        "executedAt": "4:14:30 pm",
+        "source": "RPC get_country_tech_companies('Canada')",
+        "timestamp": 1785408270878
+      },
+      "zero_employees": {
+        "count": 181460,
+        "executedAt": "4:14:31 pm",
+        "source": "RPC get_country_no_employees('Canada')",
+        "timestamp": 1785408271489
+      }
+    },
+    "India": {
+      "total_companies": {
+        "count": 924583,
+        "executedAt": "4:14:39 pm",
+        "source": "RPC get_country_total_companies('India')",
+        "timestamp": 1785408279990
+      }
+    }
+  }
+}

@@ -41,6 +41,20 @@ export async function fetchQuerySuiteCountFromSupabase(
   }
 }
 
+export async function fetchCachedQuerySuiteFromSupabase(country: string = 'United States'): Promise<Record<string, { count: number; executedAt: string; source: string }>> {
+  try {
+    const res = await fetch(`/api/supabase-query-suite?cached=true&country=${encodeURIComponent(country)}`, { cache: 'no-store' });
+    const data = await res.json();
+
+    if (data.success && data.cachedQueries) {
+      return data.cachedQueries;
+    }
+  } catch (e) {
+    console.error('Fetch cache error:', e);
+  }
+  return {};
+}
+
 // Helper to filter country records based on current global filter state
 function filterCountries(records: CountryComparisonRecord[], filters?: Partial<GlobalFilterState>): CountryComparisonRecord[] {
   if (!filters) return records;
