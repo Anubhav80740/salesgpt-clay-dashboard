@@ -20,8 +20,12 @@ import {
  * Executes live Supabase query on company_master table for US companies
  */
 export async function fetchUSCompanyCountFromSupabase(): Promise<{ count: number; error: string | null }> {
+  return fetchQuerySuiteCountFromSupabase('total_companies');
+}
+
+export async function fetchQuerySuiteCountFromSupabase(queryType: string): Promise<{ count: number; error: string | null }> {
   try {
-    const res = await fetch('/api/supabase-us-count', { cache: 'no-store' });
+    const res = await fetch(`/api/supabase-query-suite?type=${encodeURIComponent(queryType)}`, { cache: 'no-store' });
     const data = await res.json();
 
     if (data.success && typeof data.count === 'number') {
