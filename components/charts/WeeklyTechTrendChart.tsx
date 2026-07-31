@@ -10,10 +10,11 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from 'recharts';
-import { ChevronDown, Info, Clock } from 'lucide-react';
+import { Info, Clock } from 'lucide-react';
 import { formatNumber } from '@/utils/formatters';
 import { getCountryComparisonData } from '@/services/dashboard';
 import { COUNTRY_CODES } from '@/components/dashboard/CustomCountrySelect';
+import { CustomSelect } from '@/components/dashboard/CustomSelect';
 
 interface WeeklyPoint {
   date: string;
@@ -85,18 +86,11 @@ export function WeeklyTechTrendChart() {
               <p className="text-xs text-slate-500">Tech company records added over time</p>
             </div>
 
-            <div className="relative">
-              <select
-                value={timeframe}
-                onChange={(e) => setTimeframe(e.target.value as any)}
-                className="pl-3 pr-8 py-1.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl text-xs font-bold text-slate-700 focus:outline-none cursor-pointer transition-colors appearance-none"
-              >
-                <option value="Daily">Daily</option>
-                <option value="Weekly">Weekly</option>
-                <option value="Monthly">Monthly</option>
-              </select>
-              <ChevronDown className="w-3.5 h-3.5 absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" />
-            </div>
+            <CustomSelect
+              value={timeframe}
+              options={['Daily', 'Weekly', 'Monthly']}
+              onChange={(val) => setTimeframe(val as any)}
+            />
           </div>
 
           {/* Growth Total */}

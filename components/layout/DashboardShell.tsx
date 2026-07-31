@@ -3,10 +3,10 @@
 import React, { useState } from 'react';
 import { Sidebar } from './Sidebar';
 import { Topbar } from './Topbar';
-import { SampleBanner } from '@/components/dashboard/SampleBanner';
-import { FilterBar } from '@/components/filters/FilterBar';
+import { FilterDrawer } from '@/components/filters/FilterDrawer';
 import { GlobalFilterState } from '@/types';
 import { getFilterOptions } from '@/services/dashboard';
+import { Sliders } from 'lucide-react';
 
 const initialFilters: GlobalFilterState = {
   country: 'All',
@@ -29,6 +29,7 @@ interface DashboardShellProps {
 
 export function DashboardShell({ children }: DashboardShellProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [filterDrawerOpen, setFilterDrawerOpen] = useState(false);
   const [filters, setFilters] = useState<GlobalFilterState>(() => {
     if (typeof window !== 'undefined') {
       const saved = sessionStorage.getItem('dashboard_global_filters');
@@ -65,11 +66,12 @@ export function DashboardShell({ children }: DashboardShellProps) {
     }
   };
 
+  const activeFilterCount = Object.entries(filters).filter(
+    ([key, value]) => key !== 'dateRange' && key !== 'searchQuery' && value !== 'All'
+  ).length;
+
   return (
     <div className="min-h-screen bg-background text-slate-900 flex flex-col font-sans antialiased">
-      {/* Sample Data Yellow Notification Banner */}
-      <SampleBanner />
-
       <div className="flex flex-1 relative">
         {/* Left Sidebar */}
         <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
@@ -78,15 +80,19 @@ export function DashboardShell({ children }: DashboardShellProps) {
         <div className="flex-1 flex flex-col min-w-0">
           <Topbar
             onToggleSidebar={() => setSidebarOpen(!sidebarOpen)}
+            onOpenFilters={() => setFilterDrawerOpen(true)}
+            activeFilterCount={activeFilterCount}
             selectedDateRange={filters.dateRange}
-            onDateRangeChange={(range) => setFilters({ ...filters, dateRange: range })}
+            onDateRangeChange={(range) => handleFilterChange({ ...filters, dateRange: range })}
             onRefresh={handleRefresh}
             isRefreshing={isRefreshing}
           />
 
           <main className="p-4 sm:p-6 lg:p-8 flex-1 max-w-7xl w-full mx-auto">
-            {/* Global Filter Bar */}
-            <FilterBar
+            {/* E-Commerce Slide-Out Filter Drawer */}
+            <FilterDrawer
+              isOpen={filterDrawerOpen}
+              onClose={() => setFilterDrawerOpen(false)}
               filters={filters}
               options={filterOptions}
               onChange={handleFilterChange}

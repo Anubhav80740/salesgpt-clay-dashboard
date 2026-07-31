@@ -2,10 +2,13 @@
 
 import React from 'react';
 import { useRouter } from 'next/navigation';
-import { Calendar, Menu, Building2, Users, BarChart3, LogOut, UserCheck } from 'lucide-react';
+import { Calendar, Menu, Building2, Users, BarChart3, LogOut, UserCheck, Sliders } from 'lucide-react';
+import { CustomSelect } from '@/components/dashboard/CustomSelect';
 
 interface TopbarProps {
   onToggleSidebar: () => void;
+  onOpenFilters?: () => void;
+  activeFilterCount?: number;
   selectedDateRange: string;
   onDateRangeChange: (range: string) => void;
   onRefresh: () => void;
@@ -14,6 +17,8 @@ interface TopbarProps {
 
 export function Topbar({
   onToggleSidebar,
+  onOpenFilters,
+  activeFilterCount = 0,
   selectedDateRange,
   onDateRangeChange,
 }: TopbarProps) {
@@ -85,22 +90,35 @@ export function Topbar({
         </div>
       </div>
 
-      {/* Right controls: Date Range Picker + Sign Out */}
+      {/* Right controls: Filter Drawer Trigger + Date Range Picker + Sign Out */}
       <div className="flex items-center gap-3">
-        <div className="flex items-center gap-2 bg-white border border-slate-200 rounded-lg px-3 py-1.5 text-xs shadow-xs">
-          <Calendar className="w-3.5 h-3.5 text-slate-400" />
-          <select
-            value={selectedDateRange}
-            onChange={(e) => onDateRangeChange(e.target.value)}
-            className="bg-transparent text-slate-800 font-semibold focus:outline-none cursor-pointer text-xs"
+        {onOpenFilters && (
+          <button
+            onClick={onOpenFilters}
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200 rounded-xl text-xs font-bold shadow-xs transition-colors"
           >
-            <option value="Jul 14 - Jul 21, 2026">Jul 14 - Jul 21, 2026</option>
-            <option value="Last 7 Days">Last 7 Days</option>
-            <option value="Last 30 Days">Last 30 Days</option>
-            <option value="Last 90 Days">Last 90 Days</option>
-            <option value="Year to Date">Year to Date</option>
-          </select>
-        </div>
+            <Sliders className="w-3.5 h-3.5" />
+            <span>Filter Data</span>
+            {activeFilterCount > 0 && (
+              <span className="bg-blue-600 text-white text-[10px] px-1.5 py-0.2 rounded-full font-bold ml-0.5">
+                {activeFilterCount}
+              </span>
+            )}
+          </button>
+        )}
+
+        <CustomSelect
+          value={selectedDateRange}
+          options={[
+            'Jul 14 - Jul 21, 2026',
+            'Last 7 Days',
+            'Last 30 Days',
+            'Last 90 Days',
+            'Year to Date'
+          ]}
+          onChange={onDateRangeChange}
+          icon={Calendar}
+        />
 
         {/* Logged in User Indicator & Sign Out */}
         <div className="flex items-center gap-2 border-l border-slate-200 pl-3">
