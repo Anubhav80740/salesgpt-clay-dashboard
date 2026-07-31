@@ -1,26 +1,23 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SectionHeader } from '@/components/dashboard/SectionHeader';
 import { OverviewKpiCards } from '@/components/dashboard/KpiCard';
 import { CoverageOverviewTable } from '@/components/tables/CoverageOverviewTable';
-import { DuplicatePieChart } from '@/components/charts/DuplicatePieChart';
-import { FiltersCleaningCard } from '@/components/dashboard/FiltersCleaningCard';
-import { PipelineOverviewCard } from '@/components/dashboard/PipelineOverviewCard';
+import { WeeklyTechTrendChart } from '@/components/charts/WeeklyTechTrendChart';
 import { DashboardShell } from '@/components/layout/DashboardShell';
 import { CardSkeleton } from '@/components/cards/LoadingSkeleton';
 import {
   getOverviewMetrics,
   getCountryComparisonData,
-  getDuplicatesData,
-  getPipelineData,
 } from '@/services/dashboard';
 import { LiveQueryTesterCard } from '@/components/dashboard/LiveQueryTesterCard';
-import { Info } from 'lucide-react';
+import { Info, Database, ChevronDown, ChevronUp } from 'lucide-react';
 
 export default function OverviewPage() {
-  const [cachedQueries, setCachedQueries] = React.useState<Record<string, Record<string, { count: number }>>>({});
+  const [cachedQueries, setCachedQueries] = useState<Record<string, Record<string, { count: number }>>>({});
+  const [showQuerySuite, setShowQuerySuite] = useState(false);
 
   const reloadCache = React.useCallback(async () => {
     try {
@@ -30,7 +27,7 @@ export default function OverviewPage() {
         setCachedQueries(data.queries);
       }
     } catch (e) {
-      console.error('Failed to load live query cache:', e);
+      console.error('Failed to load live query cache on Overview page:', e);
     }
   }, []);
 
@@ -58,8 +55,6 @@ export default function OverviewPage() {
       {({ filters, isRefreshing }) => {
         const metrics = getOverviewMetrics(filters, cachedQueries);
         const countries = getCountryComparisonData(filters, cachedQueries);
-        const duplicates = getDuplicatesData(filters);
-        const pipelineStages = getPipelineData(filters);
 
         if (isRefreshing) {
           return (
@@ -88,42 +83,49 @@ export default function OverviewPage() {
             {/* Top Page Header */}
             <SectionHeader
               title="Data Overview"
-              description="Compare data coverage, duplicates and pipeline health across sources"
+              description="High-level evaluation of tech company coverage, headcount density, and database overlap"
             />
 
-            {/* Live Supabase Query Tester */}
-            <LiveQueryTesterCard />
+            {/* Collapsible Live Supabase Query Suite Banner (Cleaned for Team Lead preference) */}
+            <div className="bg-white rounded-xl border border-slate-200 shadow-soft overflow-hidden">
+              <button
+                onClick={() => setShowQuerySuite(!showQuerySuite)}
+                className="w-full px-5 py-3.5 bg-slate-50/80 hover:bg-slate-100/80 transition-colors flex items-center justify-between text-xs font-bold text-slate-800"
+              >
+                <div className="flex items-center gap-2.5">
+                  <div className="p-1.5 rounded-lg bg-blue-600 text-white shadow-xs">
+                    <Database className="w-4 h-4" />
+                  </div>
+                  <span>Live Database Query Trigger Suite & Country Selector</span>
+                </div>
+                <div className="flex items-center gap-2 text-slate-500">
+                  <span className="text-[11px] font-medium text-slate-500">
+                    {showQuerySuite ? 'Click to collapse triggers' : 'Click to expand query triggers'}
+                  </span>
+                  {showQuerySuite ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                </div>
+              </button>
+
+              {showQuerySuite && (
+                <div className="p-4 border-t border-slate-100">
+                  <LiveQueryTesterCard />
+                </div>
+              )}
+            </div>
 
             {/* Row 1: 4 Top KPI Cards */}
             <OverviewKpiCards metrics={metrics} />
 
-            {/* Row 2: Side-by-Side (Coverage by Country + Duplicates Summary Donut) */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-              <div className="lg:col-span-7">
-                <CoverageOverviewTable data={countries} />
-              </div>
-              <div className="lg:col-span-5">
-                <DuplicatePieChart
-                  data={duplicates.types}
-                  totalRemoved={duplicates.overview.duplicateRowsRemoved}
-                />
-              </div>
-            </div>
+            {/* Row 2: Weekly Tech Companies Trend Chart */}
+            <WeeklyTechTrendChart />
 
-            {/* Row 3: Side-by-Side (Filters & Cleaning Applied + Pipeline Overview) */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-              <div className="lg:col-span-6">
-                <FiltersCleaningCard />
-              </div>
-              <div className="lg:col-span-6">
-                <PipelineOverviewCard stages={pipelineStages} />
-              </div>
-            </div>
+            {/* Row 3: Coverage by Country (Tech Companies) Table */}
+            <CoverageOverviewTable data={countries} />
 
-            {/* Footer Indicative Note matching screenshot */}
+            {/* Footer Indicative Note */}
             <div className="pt-2 text-center text-[11px] text-slate-400 flex items-center justify-center gap-1.5">
               <Info className="w-3.5 h-3.5" />
-              <span>Numbers are indicative and based on current filters. Click on cards for more details.</span>
+              <span>Numbers are live-synced from database queries and daily snapshot logs.</span>
             </div>
           </motion.div>
         );

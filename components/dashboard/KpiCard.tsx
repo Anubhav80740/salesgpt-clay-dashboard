@@ -109,7 +109,7 @@ export function OverviewKpiCards({ metrics }: OverviewKpiCardsProps) {
             <div className="text-3xl font-extrabold text-rose-600 tracking-tight">
               {formatNumber(metrics.duplicateRowsRemoved)}
             </div>
-            <p className="text-[11px] text-slate-500 mt-1">From Clay dataset</p>
+            <p className="text-[11px] text-slate-500 mt-1">From SalesGPT database</p>
           </div>
         </div>
 

@@ -1,11 +1,10 @@
 {
-  "totalSalesGPT": 82341,
-  "totalClay": 102587,
-  "salesgptGrowthTrend": 12.4,
-  "matchedCompanies": 51238,
-  "duplicateGroups": 4820,
-  "duplicateRowsRemoved": 9176,
-  "clayOnlyNewCompanies": 51349,
-  "readyForImportCount": 51349,
-  "salesgptOnly": 31557
+  "totalSalesGPT": 0,
+  "totalClay": 1783266,
+  "matchedCompanies": 0,
+  "duplicateGroups": 0,
+  "duplicateRowsRemoved": 0,
+  "clayOnlyNewCompanies": 1783266,
+  "readyForImportCount": 0,
+  "salesgptGrowthTrend": 0
 }

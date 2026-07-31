@@ -31,38 +31,41 @@ interface QueryItem {
   getSql: (country: string) => string;
 }
 
-const COUNTRY_OPTIONS = [
-  'United States',
-  'Canada',
-  'United Kingdom',
-  'Germany',
-  'France',
-  'Australia',
-  'India',
-  'Japan',
-  'Brazil',
-  'Mexico',
-  'Netherlands',
-  'Spain',
-  'Sweden',
-  'Switzerland',
-  'Italy',
-  'Ireland',
-  'Israel',
-  'Singapore',
-  'Romania',
-  'Argentina',
-  'Belgium',
-  'Austria',
-  'Denmark',
-  'Finland',
-  'Norway',
-  'Poland',
-  'Portugal',
-  'South Africa',
-  'South Korea',
-  'New Zealand'
-];
+export const COUNTRY_CODES: Record<string, string> = {
+  'United States': 'us',
+  'Canada': 'ca',
+  'United Kingdom': 'gb',
+  'Germany': 'de',
+  'France': 'fr',
+  'Australia': 'au',
+  'India': 'in',
+  'Japan': 'jp',
+  'Brazil': 'br',
+  'Mexico': 'mx',
+  'Netherlands': 'nl',
+  'Spain': 'es',
+  'Sweden': 'se',
+  'Switzerland': 'ch',
+  'Italy': 'it',
+  'Ireland': 'ie',
+  'Israel': 'il',
+  'Singapore': 'sg',
+  'Romania': 'ro',
+  'Argentina': 'ar',
+  'Belgium': 'be',
+  'Austria': 'at',
+  'Denmark': 'dk',
+  'Finland': 'fi',
+  'Norway': 'no',
+  'Poland': 'pl',
+  'Portugal': 'pt',
+  'South Africa': 'za',
+  'South Korea': 'kr',
+  'New Zealand': 'nz',
+  'United Arab Emirates': 'ae',
+};
+
+const COUNTRY_OPTIONS = Object.keys(COUNTRY_CODES);
 
 const QUERIES: QueryItem[] = [
   {
@@ -317,17 +320,23 @@ export function LiveQueryTesterCard() {
         </div>
 
         <div className="flex items-center gap-3">
-          {/* Country Selector Dropdown */}
-          <div className="relative">
-            <Globe className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-blue-600" />
+          {/* Country Selector Dropdown with Flag Image */}
+          <div className="relative flex items-center">
+            {COUNTRY_CODES[selectedCountry] && (
+              <img
+                src={`https://flagcdn.com/w40/${COUNTRY_CODES[selectedCountry]}.png`}
+                alt={selectedCountry}
+                className="w-5 h-3.5 object-cover rounded-2xs absolute left-3 pointer-events-none border border-slate-200/80 shadow-xs"
+              />
+            )}
             <select
               value={selectedCountry}
               onChange={(e) => setSelectedCountry(e.target.value)}
-              className="pl-9 pr-4 py-2 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500/20 cursor-pointer shadow-xs transition-colors"
+              className="pl-10 pr-4 py-2 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500/20 cursor-pointer shadow-xs transition-colors"
             >
               {COUNTRY_OPTIONS.map((c) => (
                 <option key={c} value={c}>
-                  📍 {c}
+                  {c}
                 </option>
               ))}
             </select>

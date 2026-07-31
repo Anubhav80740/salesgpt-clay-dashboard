@@ -1,38 +1,38 @@
 [
   {
     "id": "p1",
-    "stageName": "Raw Found",
+    "stageName": "Clay Dataset Ingested",
     "stageOrder": 1,
-    "count": 68214,
-    "subtitle": "Total raw records pulled from Clay stream",
+    "count": 1783266,
+    "subtitle": "Total records in baseline Clay dataset across 13 target countries",
     "completionPct": 100.0,
     "dropoffPct": 0.0
   },
   {
     "id": "p2",
-    "stageName": "After Filters",
+    "stageName": "Tech Industry Filter",
     "stageOrder": 2,
-    "count": 55812,
-    "subtitle": "Passed industry, employee range & domain filters",
-    "completionPct": 81.8,
-    "dropoffPct": 18.2
+    "count": 0,
+    "subtitle": "Filtered strictly for Tech & Software companies",
+    "completionPct": 0.0,
+    "dropoffPct": 0.0
   },
   {
     "id": "p3",
-    "stageName": "Deduped",
+    "stageName": "SalesGPT DB Overlap Match",
     "stageOrder": 3,
-    "count": 51349,
-    "subtitle": "Duplicates removed & normalized",
-    "completionPct": 92.0,
-    "dropoffPct": 8.0
+    "count": 0,
+    "subtitle": "Matched against company_master records",
+    "completionPct": 0.0,
+    "dropoffPct": 0.0
   },
   {
     "id": "p4",
-    "stageName": "Ready for Enrichment",
+    "stageName": "Qualified Net-New Companies",
     "stageOrder": 4,
-    "count": 51349,
-    "subtitle": "Qualified net-new companies ready for SalesGPT CRM",
-    "completionPct": 100.0,
+    "count": 0,
+    "subtitle": "Clay-only records ready for CRM enrichment",
+    "completionPct": 0.0,
     "dropoffPct": 0.0
   }
 ]

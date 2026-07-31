@@ -36,7 +36,6 @@ export interface CountryComparisonRecord {
   country: string;
   salesgpt: number;
   salesgptPct?: number;
-  clayRaw: number;
   clayClean: number;
   clayPct?: number;
   overlap: number;

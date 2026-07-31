@@ -18,6 +18,8 @@ import { CoverageBar } from '@/components/cards/CoverageBar';
 import { StatusBadge } from '@/components/cards/StatusBadge';
 import { TablePagination } from './TablePagination';
 
+import { COUNTRY_CODES } from '@/components/dashboard/LiveQueryTesterCard';
+
 interface CountryTableProps {
   data: CountryComparisonRecord[];
 }
@@ -32,11 +34,24 @@ export function CountryTable({ data }: CountryTableProps) {
     {
       accessorKey: 'country',
       header: 'Country',
-      cell: (info) => (
-        <div className="font-medium text-slate-900 flex items-center gap-2">
-          <span>{info.getValue<string>()}</span>
-        </div>
-      ),
+      cell: (info) => {
+        const countryName = info.getValue<string>();
+        const code = COUNTRY_CODES[countryName];
+        return (
+          <div className="font-semibold text-slate-900 flex items-center gap-2">
+            {code ? (
+              <img
+                src={`https://flagcdn.com/w40/${code}.png`}
+                alt={countryName}
+                className="w-4 h-3 object-cover rounded-2xs border border-slate-200 shadow-xs"
+              />
+            ) : (
+              <span>🌐</span>
+            )}
+            <span>{countryName}</span>
+          </div>
+        );
+      },
     },
     {
       accessorKey: 'salesgpt',
@@ -48,17 +63,8 @@ export function CountryTable({ data }: CountryTableProps) {
       ),
     },
     {
-      accessorKey: 'clayRaw',
-      header: 'Clay Raw',
-      cell: (info) => (
-        <span className="text-slate-600 font-mono">
-          {formatNumber(info.getValue<number>())}
-        </span>
-      ),
-    },
-    {
       accessorKey: 'clayClean',
-      header: 'Clay Clean',
+      header: 'Clay Dataset',
       cell: (info) => (
         <span className="text-slate-800 font-mono font-medium">
           {formatNumber(info.getValue<number>())}

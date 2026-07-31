@@ -29,10 +29,27 @@ interface DashboardShellProps {
 
 export function DashboardShell({ children }: DashboardShellProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [filters, setFilters] = useState<GlobalFilterState>(initialFilters);
+  const [filters, setFilters] = useState<GlobalFilterState>(() => {
+    if (typeof window !== 'undefined') {
+      const saved = sessionStorage.getItem('dashboard_global_filters');
+      if (saved) {
+        try {
+          return { ...initialFilters, ...JSON.parse(saved) };
+        } catch (e) {}
+      }
+    }
+    return initialFilters;
+  });
   const [isRefreshing, setIsRefreshing] = useState(false);
 
   const filterOptions = getFilterOptions();
+
+  const handleFilterChange = (newFilters: GlobalFilterState) => {
+    setFilters(newFilters);
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem('dashboard_global_filters', JSON.stringify(newFilters));
+    }
+  };
 
   const handleRefresh = () => {
     setIsRefreshing(true);
@@ -43,6 +60,9 @@ export function DashboardShell({ children }: DashboardShellProps) {
 
   const handleResetFilters = () => {
     setFilters(initialFilters);
+    if (typeof window !== 'undefined') {
+      sessionStorage.removeItem('dashboard_global_filters');
+    }
   };
 
   return (
@@ -69,7 +89,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
             <FilterBar
               filters={filters}
               options={filterOptions}
-              onChange={(newFilters) => setFilters(newFilters)}
+              onChange={handleFilterChange}
               onReset={handleResetFilters}
             />
 

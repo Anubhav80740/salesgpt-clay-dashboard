@@ -284,7 +284,7 @@ export function getFilterOptions(): FilterOptions {
     countries: ['All', ...countries],
     industries: ['All', ...industries],
     employeeRanges: ['All', ...employeeRanges],
-    dataSources: ['All', 'SalesGPT Only', 'Clay Raw', 'Clay Clean', 'Merged Overlap'],
+    dataSources: ['All', 'SalesGPT', 'Clay Dataset', 'Overlap'],
     pipelineStatuses: ['All', 'Raw Found', 'Technology Filter', 'Invalid Records Removed', 'Duplicate Removal', 'Compared with SalesGPT', 'New Companies', 'Ready for Enrichment', 'Ready for Import', 'Imported', 'Failed'],
     duplicateTypes: ['All', 'Exact Domain', 'LinkedIn Match', 'Legal Entity', 'Name Variation', 'Fuzzy Match', 'Other'],
     fieldIssues: ['All', 'Pending', 'Review', 'Cleaning', 'Resolved', 'Ignored'],
