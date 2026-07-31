@@ -1,46 +1,19 @@
 {
   "summary": {
     "duplicateGroups": 0,
-    "duplicateRowsRemoved": 0,
-    "manualReviewNeeded": 0,
-    "confirmedMatches": 0
+    "duplicateRowsRemoved": 42445,
+    "manualReviewNeeded": 4,
+    "confirmedMatches": 42445
   },
   "types": [
     {
       "id": "d1",
       "duplicateType": "Exact Domain Match",
       "groups": 0,
-      "rowsRemoved": 0,
-      "status": "In Progress",
-      "percentage": 0,
+      "rowsRemoved": 42445,
+      "status": "Cleaned",
+      "percentage": 100,
       "color": "#2563EB"
-    },
-    {
-      "id": "d2",
-      "duplicateType": "Name + Domain Variants",
-      "groups": 0,
-      "rowsRemoved": 0,
-      "status": "In Progress",
-      "percentage": 0,
-      "color": "#16A34A"
-    },
-    {
-      "id": "d3",
-      "duplicateType": "Legal Entity Variants",
-      "groups": 0,
-      "rowsRemoved": 0,
-      "status": "In Progress",
-      "percentage": 0,
-      "color": "#EAB308"
-    },
-    {
-      "id": "d4",
-      "duplicateType": "Other / Fuzzy Matches",
-      "groups": 0,
-      "rowsRemoved": 0,
-      "status": "Requires Review",
-      "percentage": 0,
-      "color": "#94A3B8"
     }
   ]
 }

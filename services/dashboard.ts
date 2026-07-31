@@ -183,8 +183,8 @@ export function getOverviewMetrics(
     salesgptGrowthTrend: overviewRaw.salesgptGrowthTrend,
     matchedCompanies: matchedCompanies || overviewRaw.matchedCompanies,
     matchingPercentage: Number(matchingPercentage.toFixed(1)),
-    duplicateGroups: overviewRaw.duplicateGroups,
-    duplicateRowsRemoved: overviewRaw.duplicateRowsRemoved,
+    duplicateGroups: duplicatesRaw.summary.duplicateGroups || overviewRaw.duplicateGroups,
+    duplicateRowsRemoved: duplicatesRaw.summary.duplicateRowsRemoved || overviewRaw.duplicateRowsRemoved,
     clayOnlyNewCompanies: clayOnlyNewCompanies || overviewRaw.clayOnlyNewCompanies,
     readyForImportCount: overviewRaw.readyForImportCount,
     horizontalBreakdown: {
