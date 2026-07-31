@@ -90,8 +90,8 @@ export default function OverviewPage() {
             {/* Row 2: Weekly Tech Companies Trend Chart */}
             <WeeklyTechTrendChart />
 
-            {/* Row 3: Coverage by Country (Tech Companies) Table */}
-            <CoverageOverviewTable data={countries} />
+            {/* Row 3: Coverage by Country (Top 15 Tech Companies) Table */}
+            <CoverageOverviewTable data={countries.slice(0, 15)} />
 
             {/* Footer Indicative Note */}
             <div className="pt-2 text-center text-[11px] text-slate-400 flex items-center justify-center gap-1.5">

@@ -1,0 +1,1242 @@
+[
+  {
+    "country": "China",
+    "salesgptTechCompanyCount": 33720,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Brazil",
+    "salesgptTechCompanyCount": 25570,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Canada",
+    "salesgptTechCompanyCount": 15171,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Italy",
+    "salesgptTechCompanyCount": 13522,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Spain",
+    "salesgptTechCompanyCount": 12473,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Turkey",
+    "salesgptTechCompanyCount": 9639,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Indonesia",
+    "salesgptTechCompanyCount": 7933,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Mexico",
+    "salesgptTechCompanyCount": 7862,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Pakistan",
+    "salesgptTechCompanyCount": 6655,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Switzerland",
+    "salesgptTechCompanyCount": 6079,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Japan",
+    "salesgptTechCompanyCount": 5468,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "South Africa",
+    "salesgptTechCompanyCount": 5295,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Poland",
+    "salesgptTechCompanyCount": 5207,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Saudi Arabia",
+    "salesgptTechCompanyCount": 4969,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Egypt",
+    "salesgptTechCompanyCount": 4490,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Bangladesh",
+    "salesgptTechCompanyCount": 4476,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Belgium",
+    "salesgptTechCompanyCount": 4250,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Nigeria",
+    "salesgptTechCompanyCount": 3986,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Argentina",
+    "salesgptTechCompanyCount": 3960,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Colombia",
+    "salesgptTechCompanyCount": 3677,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Vietnam",
+    "salesgptTechCompanyCount": 3488,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Portugal",
+    "salesgptTechCompanyCount": 3287,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Philippines",
+    "salesgptTechCompanyCount": 3071,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Malaysia",
+    "salesgptTechCompanyCount": 2997,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Chile",
+    "salesgptTechCompanyCount": 2826,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Iran",
+    "salesgptTechCompanyCount": 2691,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Norway",
+    "salesgptTechCompanyCount": 2643,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Israel",
+    "salesgptTechCompanyCount": 2589,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Taiwan",
+    "salesgptTechCompanyCount": 2492,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Peru",
+    "salesgptTechCompanyCount": 2338,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Hong Kong",
+    "salesgptTechCompanyCount": 2315,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Russia",
+    "salesgptTechCompanyCount": 2312,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Austria",
+    "salesgptTechCompanyCount": 2308,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "South Korea",
+    "salesgptTechCompanyCount": 2219,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Kenya",
+    "salesgptTechCompanyCount": 2085,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Morocco",
+    "salesgptTechCompanyCount": 1892,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Finland",
+    "salesgptTechCompanyCount": 1876,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Romania",
+    "salesgptTechCompanyCount": 1821,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Czechia",
+    "salesgptTechCompanyCount": 1821,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Ukraine",
+    "salesgptTechCompanyCount": 1679,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Greece",
+    "salesgptTechCompanyCount": 1629,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Thailand",
+    "salesgptTechCompanyCount": 1463,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Sri Lanka",
+    "salesgptTechCompanyCount": 1364,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Qatar",
+    "salesgptTechCompanyCount": 1024,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Ecuador",
+    "salesgptTechCompanyCount": 1021,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Hungary",
+    "salesgptTechCompanyCount": 964,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Ghana",
+    "salesgptTechCompanyCount": 932,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Tunisia",
+    "salesgptTechCompanyCount": 900,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Bulgaria",
+    "salesgptTechCompanyCount": 867,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Unknown",
+    "salesgptTechCompanyCount": 848,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Jordan",
+    "salesgptTechCompanyCount": 823,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Lithuania",
+    "salesgptTechCompanyCount": 779,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Nepal",
+    "salesgptTechCompanyCount": 773,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Cyprus",
+    "salesgptTechCompanyCount": 743,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Senegal",
+    "salesgptTechCompanyCount": 732,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Serbia",
+    "salesgptTechCompanyCount": 693,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Algeria",
+    "salesgptTechCompanyCount": 667,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Uganda",
+    "salesgptTechCompanyCount": 635,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Slovakia",
+    "salesgptTechCompanyCount": 631,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Malta",
+    "salesgptTechCompanyCount": 622,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Estonia",
+    "salesgptTechCompanyCount": 614,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Azerbaijan",
+    "salesgptTechCompanyCount": 596,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Lebanon",
+    "salesgptTechCompanyCount": 578,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Iraq",
+    "salesgptTechCompanyCount": 566,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Luxembourg",
+    "salesgptTechCompanyCount": 554,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Kuwait",
+    "salesgptTechCompanyCount": 552,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Croatia",
+    "salesgptTechCompanyCount": 551,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Venezuela",
+    "salesgptTechCompanyCount": 520,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Cameroon",
+    "salesgptTechCompanyCount": 509,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Dominican Republic",
+    "salesgptTechCompanyCount": 494,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Ivory Coast",
+    "salesgptTechCompanyCount": 488,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Costa Rica",
+    "salesgptTechCompanyCount": 480,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Uruguay",
+    "salesgptTechCompanyCount": 472,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Georgia",
+    "salesgptTechCompanyCount": 468,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Guatemala",
+    "salesgptTechCompanyCount": 466,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Ethiopia",
+    "salesgptTechCompanyCount": 454,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Angola",
+    "salesgptTechCompanyCount": 429,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Oman",
+    "salesgptTechCompanyCount": 427,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Slovenia",
+    "salesgptTechCompanyCount": 424,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Cambodia",
+    "salesgptTechCompanyCount": 411,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Democratic Republic Of The Congo",
+    "salesgptTechCompanyCount": 409,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Zimbabwe",
+    "salesgptTechCompanyCount": 404,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Kazakhstan",
+    "salesgptTechCompanyCount": 402,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Tanzania",
+    "salesgptTechCompanyCount": 398,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Latvia",
+    "salesgptTechCompanyCount": 394,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Panama",
+    "salesgptTechCompanyCount": 389,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Bahrain",
+    "salesgptTechCompanyCount": 352,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Armenia",
+    "salesgptTechCompanyCount": 322,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Myanmar",
+    "salesgptTechCompanyCount": 313,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Puerto Rico",
+    "salesgptTechCompanyCount": 310,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Belarus",
+    "salesgptTechCompanyCount": 285,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Zambia",
+    "salesgptTechCompanyCount": 282,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Bolivia",
+    "salesgptTechCompanyCount": 273,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Albania",
+    "salesgptTechCompanyCount": 259,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Bosnia And Herzegovina",
+    "salesgptTechCompanyCount": 258,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Mauritius",
+    "salesgptTechCompanyCount": 253,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Paraguay",
+    "salesgptTechCompanyCount": 252,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "El Salvador",
+    "salesgptTechCompanyCount": 247,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Mozambique",
+    "salesgptTechCompanyCount": 241,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Côte D'ivoire",
+    "salesgptTechCompanyCount": 230,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Benin",
+    "salesgptTechCompanyCount": 229,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Uzbekistan",
+    "salesgptTechCompanyCount": 213,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Honduras",
+    "salesgptTechCompanyCount": 194,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Papua New Guinea",
+    "salesgptTechCompanyCount": 191,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Madagascar",
+    "salesgptTechCompanyCount": 191,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Rwanda",
+    "salesgptTechCompanyCount": 190,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Afghanistan",
+    "salesgptTechCompanyCount": 181,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Sudan",
+    "salesgptTechCompanyCount": 180,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Maldives",
+    "salesgptTechCompanyCount": 162,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Togo",
+    "salesgptTechCompanyCount": 161,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Guinea",
+    "salesgptTechCompanyCount": 160,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Syria",
+    "salesgptTechCompanyCount": 152,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Iceland",
+    "salesgptTechCompanyCount": 150,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Burkina Faso",
+    "salesgptTechCompanyCount": 148,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Libya",
+    "salesgptTechCompanyCount": 147,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Nicaragua",
+    "salesgptTechCompanyCount": 145,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Moldova",
+    "salesgptTechCompanyCount": 138,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Trinidad And Tobago",
+    "salesgptTechCompanyCount": 128,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Somalia",
+    "salesgptTechCompanyCount": 128,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Yemen",
+    "salesgptTechCompanyCount": 122,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Jamaica",
+    "salesgptTechCompanyCount": 118,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Malawi",
+    "salesgptTechCompanyCount": 117,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Mali",
+    "salesgptTechCompanyCount": 117,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Monaco",
+    "salesgptTechCompanyCount": 113,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Gabon",
+    "salesgptTechCompanyCount": 112,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Namibia",
+    "salesgptTechCompanyCount": 110,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Botswana",
+    "salesgptTechCompanyCount": 106,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Kosovo",
+    "salesgptTechCompanyCount": 106,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Macedonia",
+    "salesgptTechCompanyCount": 102,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Republic Of The Congo",
+    "salesgptTechCompanyCount": 93,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Cuba",
+    "salesgptTechCompanyCount": 86,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Haiti",
+    "salesgptTechCompanyCount": 86,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Mongolia",
+    "salesgptTechCompanyCount": 85,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Montenegro",
+    "salesgptTechCompanyCount": 79,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Reunion",
+    "salesgptTechCompanyCount": 77,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Cayman Islands",
+    "salesgptTechCompanyCount": 76,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Isle Of Man",
+    "salesgptTechCompanyCount": 76,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Bahamas",
+    "salesgptTechCompanyCount": 72,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Liberia",
+    "salesgptTechCompanyCount": 71,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Curacao",
+    "salesgptTechCompanyCount": 70,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Palestinian Territory",
+    "salesgptTechCompanyCount": 70,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "North Macedonia",
+    "salesgptTechCompanyCount": 67,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Czech Republic",
+    "salesgptTechCompanyCount": 67,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "South Sudan",
+    "salesgptTechCompanyCount": 63,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "British Virgin Islands",
+    "salesgptTechCompanyCount": 62,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Liechtenstein",
+    "salesgptTechCompanyCount": 62,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Sierra Leone",
+    "salesgptTechCompanyCount": 62,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Gibraltar",
+    "salesgptTechCompanyCount": 62,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Fiji",
+    "salesgptTechCompanyCount": 62,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Martinique",
+    "salesgptTechCompanyCount": 61,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Niger",
+    "salesgptTechCompanyCount": 60,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Palestine",
+    "salesgptTechCompanyCount": 59,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "New Caledonia",
+    "salesgptTechCompanyCount": 52,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Chad",
+    "salesgptTechCompanyCount": 51,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Suriname",
+    "salesgptTechCompanyCount": 49,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Kyrgyzstan",
+    "salesgptTechCompanyCount": 49,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Mauritania",
+    "salesgptTechCompanyCount": 47,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Guadeloupe",
+    "salesgptTechCompanyCount": 46,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Guam",
+    "salesgptTechCompanyCount": 46,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Andorra",
+    "salesgptTechCompanyCount": 41,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Seychelles",
+    "salesgptTechCompanyCount": 41,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Brunei",
+    "salesgptTechCompanyCount": 40,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Jersey",
+    "salesgptTechCompanyCount": 38,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Barbados",
+    "salesgptTechCompanyCount": 38,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Belize",
+    "salesgptTechCompanyCount": 38,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Guyana",
+    "salesgptTechCompanyCount": 37,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Guernsey",
+    "salesgptTechCompanyCount": 37,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Macao",
+    "salesgptTechCompanyCount": 35,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "French Polynesia",
+    "salesgptTechCompanyCount": 31,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Tajikistan",
+    "salesgptTechCompanyCount": 31,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Faroe Islands",
+    "salesgptTechCompanyCount": 31,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Réunion",
+    "salesgptTechCompanyCount": 29,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "French Guiana",
+    "salesgptTechCompanyCount": 29,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Djibouti",
+    "salesgptTechCompanyCount": 29,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Burundi",
+    "salesgptTechCompanyCount": 28,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Bermuda",
+    "salesgptTechCompanyCount": 28,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Aruba",
+    "salesgptTechCompanyCount": 27,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "San Marino",
+    "salesgptTechCompanyCount": 26,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Saint Lucia",
+    "salesgptTechCompanyCount": 26,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Cape Verde",
+    "salesgptTechCompanyCount": 26,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Laos",
+    "salesgptTechCompanyCount": 25,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Lesotho",
+    "salesgptTechCompanyCount": 25,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Swaziland",
+    "salesgptTechCompanyCount": 24,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Antigua And Barbuda",
+    "salesgptTechCompanyCount": 24,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Macau",
+    "salesgptTechCompanyCount": 23,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Curaçao",
+    "salesgptTechCompanyCount": 23,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "U.s. Virgin Islands",
+    "salesgptTechCompanyCount": 22,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Equatorial Guinea",
+    "salesgptTechCompanyCount": 21,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Bhutan",
+    "salesgptTechCompanyCount": 20,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "São Tomé And Príncipe",
+    "salesgptTechCompanyCount": 17,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Comoros",
+    "salesgptTechCompanyCount": 16,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Gambia",
+    "salesgptTechCompanyCount": 16,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Greenland",
+    "salesgptTechCompanyCount": 15,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Central African Republic",
+    "salesgptTechCompanyCount": 15,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Mayotte",
+    "salesgptTechCompanyCount": 13,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Eswatini",
+    "salesgptTechCompanyCount": 12,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "The Gambia",
+    "salesgptTechCompanyCount": 12,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Vanuatu",
+    "salesgptTechCompanyCount": 12,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Saint Vincent And The Grenadines",
+    "salesgptTechCompanyCount": 12,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Vatican",
+    "salesgptTechCompanyCount": 10,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Nauru",
+    "salesgptTechCompanyCount": 9,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "European Union",
+    "salesgptTechCompanyCount": 9,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Saint Pierre And Miquelon",
+    "salesgptTechCompanyCount": 9,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Marshall Islands",
+    "salesgptTechCompanyCount": 9,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Samoa",
+    "salesgptTechCompanyCount": 8,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Guinea-bissau",
+    "salesgptTechCompanyCount": 8,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Turks And Caicos Islands",
+    "salesgptTechCompanyCount": 8,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Northern Mariana Islands",
+    "salesgptTechCompanyCount": 8,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Saint Kitts And Nevis",
+    "salesgptTechCompanyCount": 8,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Timor-leste",
+    "salesgptTechCompanyCount": 7,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Grenada",
+    "salesgptTechCompanyCount": 7,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Solomon Islands",
+    "salesgptTechCompanyCount": 7,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "British Indian Ocean Territory",
+    "salesgptTechCompanyCount": 7,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "American Samoa",
+    "salesgptTechCompanyCount": 7,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Serbia And Montenegro",
+    "salesgptTechCompanyCount": 6,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Vatican City",
+    "salesgptTechCompanyCount": 6,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "East Timor",
+    "salesgptTechCompanyCount": 6,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Tonga",
+    "salesgptTechCompanyCount": 6,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Saint Barthelemy",
+    "salesgptTechCompanyCount": 6,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Turkmenistan",
+    "salesgptTechCompanyCount": 5,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "North Korea",
+    "salesgptTechCompanyCount": 5,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Dominica",
+    "salesgptTechCompanyCount": 4,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Sao Tome And Principe",
+    "salesgptTechCompanyCount": 4,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Cook Islands",
+    "salesgptTechCompanyCount": 4,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Saint Martin",
+    "salesgptTechCompanyCount": 4,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Netherlands Antilles",
+    "salesgptTechCompanyCount": 4,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Kiribati",
+    "salesgptTechCompanyCount": 4,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Tokelau",
+    "salesgptTechCompanyCount": 3,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Montserrat",
+    "salesgptTechCompanyCount": 3,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Bonaire, Saint Eustatius And Saba",
+    "salesgptTechCompanyCount": 3,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Anguilla",
+    "salesgptTechCompanyCount": 3,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Svalbard And Jan Mayen",
+    "salesgptTechCompanyCount": 2,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "South Georgia And The South Sandwich Islands",
+    "salesgptTechCompanyCount": 2,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Caribbean Netherlands",
+    "salesgptTechCompanyCount": 2,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Antarctica",
+    "salesgptTechCompanyCount": 2,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Sint Maarten",
+    "salesgptTechCompanyCount": 2,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Aland Islands",
+    "salesgptTechCompanyCount": 2,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Wallis And Futuna",
+    "salesgptTechCompanyCount": 2,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "French Southern Territories",
+    "salesgptTechCompanyCount": 1,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Saint Helena",
+    "salesgptTechCompanyCount": 1,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Congo",
+    "salesgptTechCompanyCount": 1,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Saint Barthélemy",
+    "salesgptTechCompanyCount": 1,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Bouvet Island",
+    "salesgptTechCompanyCount": 1,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Åland Islands",
+    "salesgptTechCompanyCount": 1,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "United States Minor Outlying Islands",
+    "salesgptTechCompanyCount": 1,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Norfolk Island",
+    "salesgptTechCompanyCount": 1,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Micronesia",
+    "salesgptTechCompanyCount": 1,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Falkland Islands",
+    "salesgptTechCompanyCount": 1,
+    "clayDataStatus": "Clay Data Pending"
+  }
+]
