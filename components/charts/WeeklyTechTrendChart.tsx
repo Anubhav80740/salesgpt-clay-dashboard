@@ -13,7 +13,7 @@ import {
 import { ChevronDown, Info, Clock } from 'lucide-react';
 import { formatNumber } from '@/utils/formatters';
 import { getCountryComparisonData } from '@/services/dashboard';
-import { COUNTRY_CODES } from '@/components/dashboard/LiveQueryTesterCard';
+import { COUNTRY_CODES } from '@/components/dashboard/CustomCountrySelect';
 
 interface WeeklyPoint {
   date: string;

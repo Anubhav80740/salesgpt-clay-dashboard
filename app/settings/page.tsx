@@ -4,7 +4,8 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SectionHeader } from '@/components/dashboard/SectionHeader';
 import { DashboardShell } from '@/components/layout/DashboardShell';
-import { Settings, Key, Sliders, Bell, Database, Check } from 'lucide-react';
+import { LiveQueryTesterCard } from '@/components/dashboard/LiveQueryTesterCard';
+import { Key, Sliders, Check } from 'lucide-react';
 
 export default function SettingsPage() {
   const [saved, setSaved] = useState(false);
@@ -25,15 +26,18 @@ export default function SettingsPage() {
           className="space-y-6"
         >
           <SectionHeader
-            title="Dashboard & Pipeline Settings"
-            description="Manage data reconciliation confidence thresholds, API keys, and automated cleaning rules."
+            title="Dashboard & Database Update Settings"
+            description="Execute on-demand database count updates across all countries, manage sync thresholds, and configure API endpoints."
           />
 
+          {/* Section 1: Live Database Count Update Suite */}
+          <LiveQueryTesterCard />
+
           <form onSubmit={handleSave} className="space-y-6">
-            {/* Section 1: API Connections */}
+            {/* Section 2: API Connections */}
             <div className="bg-white rounded-xl border border-slate-200 p-6 shadow-soft space-y-4">
               <div className="flex items-center gap-2 pb-3 border-b border-slate-100">
-                <Key className="w-4 h-4 text-salesgpt-600" />
+                <Key className="w-4 h-4 text-blue-600" />
                 <h2 className="text-base font-bold text-slate-900">API Credentials & Sync Endpoints</h2>
               </div>
 
@@ -64,10 +68,10 @@ export default function SettingsPage() {
               </div>
             </div>
 
-            {/* Section 2: Matching Confidence */}
+            {/* Section 3: Matching Confidence */}
             <div className="bg-white rounded-xl border border-slate-200 p-6 shadow-soft space-y-4">
               <div className="flex items-center gap-2 pb-3 border-b border-slate-100">
-                <Sliders className="w-4 h-4 text-clay-600" />
+                <Sliders className="w-4 h-4 text-indigo-600" />
                 <h2 className="text-base font-bold text-slate-900">Matching Confidence Thresholds</h2>
               </div>
 
@@ -77,7 +81,7 @@ export default function SettingsPage() {
                     <label className="text-xs font-semibold text-slate-700">
                       Exact Domain Match Confidence
                     </label>
-                    <span className="text-xs font-bold text-salesgpt-600 font-mono">95%</span>
+                    <span className="text-xs font-bold text-blue-600 font-mono">95%</span>
                   </div>
                   <input
                     type="range"
@@ -108,7 +112,7 @@ export default function SettingsPage() {
               </div>
             </div>
 
-            {/* Section 3: Save button */}
+            {/* Section 4: Save button */}
             <div className="flex items-center justify-end gap-3">
               {saved && (
                 <span className="text-xs font-semibold text-emerald-600 flex items-center gap-1">
@@ -118,7 +122,7 @@ export default function SettingsPage() {
               )}
               <button
                 type="submit"
-                className="px-4 py-2 bg-salesgpt-600 hover:bg-salesgpt-700 text-white rounded-lg text-xs font-semibold shadow-xs transition-colors"
+                className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-xs font-semibold shadow-xs transition-colors"
               >
                 Save Configuration
               </button>

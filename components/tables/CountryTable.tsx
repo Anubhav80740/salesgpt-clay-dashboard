@@ -18,7 +18,7 @@ import { CoverageBar } from '@/components/cards/CoverageBar';
 import { StatusBadge } from '@/components/cards/StatusBadge';
 import { TablePagination } from './TablePagination';
 
-import { COUNTRY_CODES } from '@/components/dashboard/LiveQueryTesterCard';
+import { COUNTRY_CODES } from '@/components/dashboard/CustomCountrySelect';
 
 interface CountryTableProps {
   data: CountryComparisonRecord[];

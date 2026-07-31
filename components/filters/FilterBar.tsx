@@ -26,22 +26,25 @@ export function FilterBar({ filters, options, onChange, onReset }: FilterBarProp
   ).length;
 
   return (
-    <div className="bg-white rounded-xl border border-slate-200 p-4 shadow-soft mb-6 transition-all">
+    <div className="bg-white rounded-xl border border-slate-200 p-3 shadow-soft mb-6 transition-all">
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="p-1.5 rounded-lg bg-blue-50 text-salesgpt-600">
+        <div className="flex items-center gap-2 cursor-pointer" onClick={() => setIsExpanded(!isExpanded)}>
+          <div className="p-1.5 rounded-lg bg-blue-50 text-blue-600">
             <Filter className="w-4 h-4" />
           </div>
           <div>
-            <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider flex items-center gap-2">
-              Global Data Filters
-              {activeCount > 0 && (
-                <span className="bg-blue-600 text-white text-[10px] px-1.5 py-0.5 rounded-full font-semibold">
+            <h3 className="text-xs font-extrabold text-slate-800 tracking-tight flex items-center gap-2">
+              <span>Filters & Slicers</span>
+              {activeCount > 0 ? (
+                <span className="bg-blue-600 text-white text-[10px] px-2 py-0.5 rounded-full font-bold">
                   {activeCount} active
+                </span>
+              ) : (
+                <span className="text-[10px] font-medium text-slate-400">
+                  (Click to filter by Country, Industry, Employee Tier...)
                 </span>
               )}
             </h3>
-            <p className="text-[11px] text-slate-500">Filter all dashboard panels and service queries in real-time</p>
           </div>
         </div>
 
@@ -49,18 +52,19 @@ export function FilterBar({ filters, options, onChange, onReset }: FilterBarProp
           {activeCount > 0 && (
             <button
               onClick={onReset}
-              className="text-xs text-slate-500 hover:text-slate-900 flex items-center gap-1 px-2.5 py-1 rounded-md border border-slate-200 hover:bg-slate-50 transition-colors font-medium"
+              className="text-[11px] text-slate-500 hover:text-slate-900 flex items-center gap-1 px-2 py-1 rounded-md border border-slate-200 hover:bg-slate-50 transition-colors font-semibold"
             >
               <RotateCcw className="w-3 h-3" />
-              Reset Filters
+              Reset All
             </button>
           )}
 
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="p-1.5 text-slate-400 hover:text-slate-600 rounded-md hover:bg-slate-100 transition-colors"
+            className="inline-flex items-center gap-1 px-3 py-1 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg text-xs font-bold transition-colors"
           >
-            {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+            <span>{isExpanded ? 'Hide Filters' : 'Filter Data'}</span>
+            {isExpanded ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
           </button>
         </div>
       </div>

@@ -3,7 +3,7 @@ import { CountryComparisonRecord } from '@/types';
 import { formatNumber } from '@/utils/formatters';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-import { COUNTRY_CODES } from '@/components/dashboard/LiveQueryTesterCard';
+import { COUNTRY_CODES } from '@/components/dashboard/CustomCountrySelect';
 
 interface CoverageOverviewTableProps {
   data: CountryComparisonRecord[];

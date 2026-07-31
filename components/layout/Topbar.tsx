@@ -48,19 +48,40 @@ export function Topbar({
         </div>
 
         {/* Center Segmented Button Control matching screenshot */}
-        <div className="hidden lg:flex items-center p-1 bg-slate-100/90 rounded-xl border border-slate-200/60">
-          <button className="flex items-center gap-1.5 px-4 py-1.5 rounded-lg text-xs font-semibold bg-white text-salesgpt-600 shadow-xs border border-slate-200/80">
-            <Building2 className="w-3.5 h-3.5" />
-            <span>Company Data</span>
-          </button>
+        <div className="hidden lg:flex items-center gap-2">
+          {/* Main Segmented Toggle */}
+          <div className="flex items-center p-1 bg-slate-100/90 rounded-xl border border-slate-200/60">
+            <button className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-blue-600 shadow-xs border border-slate-200/80">
+              <Building2 className="w-3.5 h-3.5" />
+              <span>Company Data</span>
+            </button>
 
-          <button
-            disabled
-            className="flex items-center gap-1.5 px-4 py-1.5 rounded-lg text-xs font-semibold text-slate-400 cursor-not-allowed opacity-80"
-          >
-            <Users className="w-3.5 h-3.5" />
-            <span>People Data</span>
-          </button>
+            <button
+              disabled
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 cursor-not-allowed opacity-80"
+              title="People Data is not accessible"
+            >
+              <Users className="w-3.5 h-3.5" />
+              <span>People Data</span>
+            </button>
+          </div>
+
+          {/* Sub-Category Toggle: Tech vs Non-Tech Companies */}
+          <div className="flex items-center p-1 bg-slate-100/90 rounded-xl border border-slate-200/60">
+            <button className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-emerald-600 shadow-xs border border-slate-200/80">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span>Tech Companies</span>
+            </button>
+
+            <button
+              disabled
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 cursor-not-allowed opacity-80"
+              title="Non-Tech Companies database access is disabled"
+            >
+              <span className="w-2 h-2 rounded-full bg-slate-300"></span>
+              <span>Non-Tech Companies</span>
+            </button>
+          </div>
         </div>
       </div>
 

@@ -12,12 +12,10 @@ import {
   getOverviewMetrics,
   getCountryComparisonData,
 } from '@/services/dashboard';
-import { LiveQueryTesterCard } from '@/components/dashboard/LiveQueryTesterCard';
-import { Info, Database, ChevronDown, ChevronUp } from 'lucide-react';
+import { Info } from 'lucide-react';
 
 export default function OverviewPage() {
   const [cachedQueries, setCachedQueries] = useState<Record<string, Record<string, { count: number }>>>({});
-  const [showQuerySuite, setShowQuerySuite] = useState(false);
 
   const reloadCache = React.useCallback(async () => {
     try {
@@ -44,7 +42,7 @@ export default function OverviewPage() {
       })
       .catch((err) => console.error('Daily check error:', err));
 
-    // Listen to query execution updates from LiveQueryTesterCard
+    // Listen to query execution updates
     const handleUpdate = () => reloadCache();
     window.addEventListener('queryCacheUpdated', handleUpdate);
     return () => window.removeEventListener('queryCacheUpdated', handleUpdate);
@@ -85,33 +83,6 @@ export default function OverviewPage() {
               title="Data Overview"
               description="High-level evaluation of tech company coverage, headcount density, and database overlap"
             />
-
-            {/* Collapsible Live Supabase Query Suite Banner (Cleaned for Team Lead preference) */}
-            <div className="bg-white rounded-xl border border-slate-200 shadow-soft overflow-hidden">
-              <button
-                onClick={() => setShowQuerySuite(!showQuerySuite)}
-                className="w-full px-5 py-3.5 bg-slate-50/80 hover:bg-slate-100/80 transition-colors flex items-center justify-between text-xs font-bold text-slate-800"
-              >
-                <div className="flex items-center gap-2.5">
-                  <div className="p-1.5 rounded-lg bg-blue-600 text-white shadow-xs">
-                    <Database className="w-4 h-4" />
-                  </div>
-                  <span>Live Database Query Trigger Suite & Country Selector</span>
-                </div>
-                <div className="flex items-center gap-2 text-slate-500">
-                  <span className="text-[11px] font-medium text-slate-500">
-                    {showQuerySuite ? 'Click to collapse triggers' : 'Click to expand query triggers'}
-                  </span>
-                  {showQuerySuite ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-                </div>
-              </button>
-
-              {showQuerySuite && (
-                <div className="p-4 border-t border-slate-100">
-                  <LiveQueryTesterCard />
-                </div>
-              )}
-            </div>
 
             {/* Row 1: 4 Top KPI Cards */}
             <OverviewKpiCards metrics={metrics} />
