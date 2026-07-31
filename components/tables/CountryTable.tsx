@@ -74,9 +74,9 @@ export function CountryTable({ data }: CountryTableProps) {
     {
       accessorKey: 'overlap',
       header: 'Overlap',
-      cell: (info) => (
-        <span className="font-semibold text-indigo-600 font-mono">
-          {formatNumber(info.getValue<number>())}
+      cell: () => (
+        <span className="font-semibold text-slate-400 font-mono">
+          -
         </span>
       ),
     },

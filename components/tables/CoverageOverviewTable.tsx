@@ -91,11 +91,11 @@ export function CoverageOverviewTable({ data }: CoverageOverviewTableProps) {
                   <td className="py-2.5 px-1 text-right font-mono text-slate-500">
                     {row.clayPct}%
                   </td>
-                  <td className="py-2.5 px-1 text-right font-mono text-indigo-600 font-medium">
-                    {row.overlap > 0 ? formatNumber(row.overlap) : '-'}
+                  <td className="py-2.5 px-1 text-right font-mono text-slate-400 font-medium">
+                    -
                   </td>
-                  <td className="py-2.5 px-1 text-right font-mono text-slate-500">
-                    {row.overlapPct ? `${row.overlapPct}%` : '-'}
+                  <td className="py-2.5 px-1 text-right font-mono text-slate-400">
+                    -
                   </td>
                   <td className="py-2.5 px-2 text-right font-mono text-emerald-600">
                     {formatNumber(row.clayOnly)}
