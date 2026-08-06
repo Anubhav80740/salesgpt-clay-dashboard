@@ -1,142 +1,187 @@
 [
   {
     "country": "China",
-    "salesgptTechCompanyCount": 33720,
+    "salesgptTechCompanyCount": 613790,
     "clayDataStatus": "Clay Data Pending"
   },
   {
     "country": "Brazil",
-    "salesgptTechCompanyCount": 25570,
-    "clayDataStatus": "Clay Data Pending"
-  },
-  {
-    "country": "Canada",
-    "salesgptTechCompanyCount": 15171,
-    "clayDataStatus": "Clay Data Pending"
-  },
-  {
-    "country": "Italy",
-    "salesgptTechCompanyCount": 13522,
+    "salesgptTechCompanyCount": 148396,
     "clayDataStatus": "Clay Data Pending"
   },
   {
     "country": "Spain",
-    "salesgptTechCompanyCount": 12473,
+    "salesgptTechCompanyCount": 120004,
     "clayDataStatus": "Clay Data Pending"
   },
   {
-    "country": "Turkey",
-    "salesgptTechCompanyCount": 9639,
-    "clayDataStatus": "Clay Data Pending"
-  },
-  {
-    "country": "Indonesia",
-    "salesgptTechCompanyCount": 7933,
-    "clayDataStatus": "Clay Data Pending"
-  },
-  {
-    "country": "Mexico",
-    "salesgptTechCompanyCount": 7862,
-    "clayDataStatus": "Clay Data Pending"
-  },
-  {
-    "country": "Pakistan",
-    "salesgptTechCompanyCount": 6655,
-    "clayDataStatus": "Clay Data Pending"
-  },
-  {
-    "country": "Switzerland",
-    "salesgptTechCompanyCount": 6079,
-    "clayDataStatus": "Clay Data Pending"
-  },
-  {
-    "country": "Japan",
-    "salesgptTechCompanyCount": 5468,
-    "clayDataStatus": "Clay Data Pending"
-  },
-  {
-    "country": "South Africa",
-    "salesgptTechCompanyCount": 5295,
-    "clayDataStatus": "Clay Data Pending"
-  },
-  {
-    "country": "Poland",
-    "salesgptTechCompanyCount": 5207,
-    "clayDataStatus": "Clay Data Pending"
-  },
-  {
-    "country": "Saudi Arabia",
-    "salesgptTechCompanyCount": 4969,
-    "clayDataStatus": "Clay Data Pending"
-  },
-  {
-    "country": "Egypt",
-    "salesgptTechCompanyCount": 4490,
-    "clayDataStatus": "Clay Data Pending"
-  },
-  {
-    "country": "Bangladesh",
-    "salesgptTechCompanyCount": 4476,
+    "country": "Canada",
+    "salesgptTechCompanyCount": 104682,
     "clayDataStatus": "Clay Data Pending"
   },
   {
     "country": "Belgium",
-    "salesgptTechCompanyCount": 4250,
+    "salesgptTechCompanyCount": 60198,
     "clayDataStatus": "Clay Data Pending"
   },
   {
-    "country": "Nigeria",
-    "salesgptTechCompanyCount": 3986,
+    "country": "Italy",
+    "salesgptTechCompanyCount": 59769,
     "clayDataStatus": "Clay Data Pending"
   },
   {
-    "country": "Argentina",
-    "salesgptTechCompanyCount": 3960,
+    "country": "Turkey",
+    "salesgptTechCompanyCount": 44321,
     "clayDataStatus": "Clay Data Pending"
   },
   {
-    "country": "Colombia",
-    "salesgptTechCompanyCount": 3677,
+    "country": "Pakistan",
+    "salesgptTechCompanyCount": 44308,
     "clayDataStatus": "Clay Data Pending"
   },
   {
-    "country": "Vietnam",
-    "salesgptTechCompanyCount": 3488,
+    "country": "Mexico",
+    "salesgptTechCompanyCount": 33347,
     "clayDataStatus": "Clay Data Pending"
   },
   {
-    "country": "Portugal",
-    "salesgptTechCompanyCount": 3287,
+    "country": "South Africa",
+    "salesgptTechCompanyCount": 31727,
     "clayDataStatus": "Clay Data Pending"
   },
   {
-    "country": "Philippines",
-    "salesgptTechCompanyCount": 3071,
+    "country": "Poland",
+    "salesgptTechCompanyCount": 30202,
     "clayDataStatus": "Clay Data Pending"
   },
   {
-    "country": "Malaysia",
-    "salesgptTechCompanyCount": 2997,
-    "clayDataStatus": "Clay Data Pending"
-  },
-  {
-    "country": "Chile",
-    "salesgptTechCompanyCount": 2826,
-    "clayDataStatus": "Clay Data Pending"
-  },
-  {
-    "country": "Iran",
-    "salesgptTechCompanyCount": 2691,
+    "country": "Switzerland",
+    "salesgptTechCompanyCount": 29368,
     "clayDataStatus": "Clay Data Pending"
   },
   {
     "country": "Norway",
-    "salesgptTechCompanyCount": 2643,
+    "salesgptTechCompanyCount": 26068,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Nigeria",
+    "salesgptTechCompanyCount": 26015,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Indonesia",
+    "salesgptTechCompanyCount": 25425,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Argentina",
+    "salesgptTechCompanyCount": 23053,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Colombia",
+    "salesgptTechCompanyCount": 22355,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Bangladesh",
+    "salesgptTechCompanyCount": 22077,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Japan",
+    "salesgptTechCompanyCount": 20298,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Portugal",
+    "salesgptTechCompanyCount": 18012,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Chile",
+    "salesgptTechCompanyCount": 17892,
     "clayDataStatus": "Clay Data Pending"
   },
   {
     "country": "Israel",
-    "salesgptTechCompanyCount": 2589,
+    "salesgptTechCompanyCount": 15838,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Malaysia",
+    "salesgptTechCompanyCount": 15420,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Saudi Arabia",
+    "salesgptTechCompanyCount": 15060,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Egypt",
+    "salesgptTechCompanyCount": 14135,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Austria",
+    "salesgptTechCompanyCount": 13808,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Iran",
+    "salesgptTechCompanyCount": 13522,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Romania",
+    "salesgptTechCompanyCount": 12692,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Hong Kong",
+    "salesgptTechCompanyCount": 12588,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Peru",
+    "salesgptTechCompanyCount": 12034,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Kenya",
+    "salesgptTechCompanyCount": 11630,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Philippines",
+    "salesgptTechCompanyCount": 11494,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Finland",
+    "salesgptTechCompanyCount": 11335,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Czechia",
+    "salesgptTechCompanyCount": 11138,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Vietnam",
+    "salesgptTechCompanyCount": 10363,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Greece",
+    "salesgptTechCompanyCount": 8207,
+    "clayDataStatus": "Clay Data Pending"
+  },
+  {
+    "country": "Hungary",
+    "salesgptTechCompanyCount": 8021,
     "clayDataStatus": "Clay Data Pending"
   },
   {
@@ -145,23 +190,8 @@
     "clayDataStatus": "Clay Data Pending"
   },
   {
-    "country": "Peru",
-    "salesgptTechCompanyCount": 2338,
-    "clayDataStatus": "Clay Data Pending"
-  },
-  {
-    "country": "Hong Kong",
-    "salesgptTechCompanyCount": 2315,
-    "clayDataStatus": "Clay Data Pending"
-  },
-  {
     "country": "Russia",
     "salesgptTechCompanyCount": 2312,
-    "clayDataStatus": "Clay Data Pending"
-  },
-  {
-    "country": "Austria",
-    "salesgptTechCompanyCount": 2308,
     "clayDataStatus": "Clay Data Pending"
   },
   {
@@ -170,38 +200,13 @@
     "clayDataStatus": "Clay Data Pending"
   },
   {
-    "country": "Kenya",
-    "salesgptTechCompanyCount": 2085,
-    "clayDataStatus": "Clay Data Pending"
-  },
-  {
     "country": "Morocco",
     "salesgptTechCompanyCount": 1892,
     "clayDataStatus": "Clay Data Pending"
   },
   {
-    "country": "Finland",
-    "salesgptTechCompanyCount": 1876,
-    "clayDataStatus": "Clay Data Pending"
-  },
-  {
-    "country": "Romania",
-    "salesgptTechCompanyCount": 1821,
-    "clayDataStatus": "Clay Data Pending"
-  },
-  {
-    "country": "Czechia",
-    "salesgptTechCompanyCount": 1821,
-    "clayDataStatus": "Clay Data Pending"
-  },
-  {
     "country": "Ukraine",
     "salesgptTechCompanyCount": 1679,
-    "clayDataStatus": "Clay Data Pending"
-  },
-  {
-    "country": "Greece",
-    "salesgptTechCompanyCount": 1629,
     "clayDataStatus": "Clay Data Pending"
   },
   {
@@ -222,11 +227,6 @@
   {
     "country": "Ecuador",
     "salesgptTechCompanyCount": 1021,
-    "clayDataStatus": "Clay Data Pending"
-  },
-  {
-    "country": "Hungary",
-    "salesgptTechCompanyCount": 964,
     "clayDataStatus": "Clay Data Pending"
   },
   {

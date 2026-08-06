@@ -4,52 +4,52 @@ Total Countries Pending Clay Data: **248** out of **261** countries.
 
 | # | Country | SalesGPT Tech Company Count | Clay Status |
 |---|---|---|---|
-| 1 | China | 33,720 | ⏳ Pending Clay Data |
-| 2 | Brazil | 25,570 | ⏳ Pending Clay Data |
-| 3 | Canada | 15,171 | ⏳ Pending Clay Data |
-| 4 | Italy | 13,522 | ⏳ Pending Clay Data |
-| 5 | Spain | 12,473 | ⏳ Pending Clay Data |
-| 6 | Turkey | 9,639 | ⏳ Pending Clay Data |
-| 7 | Indonesia | 7,933 | ⏳ Pending Clay Data |
-| 8 | Mexico | 7,862 | ⏳ Pending Clay Data |
-| 9 | Pakistan | 6,655 | ⏳ Pending Clay Data |
-| 10 | Switzerland | 6,079 | ⏳ Pending Clay Data |
-| 11 | Japan | 5,468 | ⏳ Pending Clay Data |
-| 12 | South Africa | 5,295 | ⏳ Pending Clay Data |
-| 13 | Poland | 5,207 | ⏳ Pending Clay Data |
-| 14 | Saudi Arabia | 4,969 | ⏳ Pending Clay Data |
-| 15 | Egypt | 4,490 | ⏳ Pending Clay Data |
-| 16 | Bangladesh | 4,476 | ⏳ Pending Clay Data |
-| 17 | Belgium | 4,250 | ⏳ Pending Clay Data |
-| 18 | Nigeria | 3,986 | ⏳ Pending Clay Data |
-| 19 | Argentina | 3,960 | ⏳ Pending Clay Data |
-| 20 | Colombia | 3,677 | ⏳ Pending Clay Data |
-| 21 | Vietnam | 3,488 | ⏳ Pending Clay Data |
-| 22 | Portugal | 3,287 | ⏳ Pending Clay Data |
-| 23 | Philippines | 3,071 | ⏳ Pending Clay Data |
-| 24 | Malaysia | 2,997 | ⏳ Pending Clay Data |
-| 25 | Chile | 2,826 | ⏳ Pending Clay Data |
-| 26 | Iran | 2,691 | ⏳ Pending Clay Data |
-| 27 | Norway | 2,643 | ⏳ Pending Clay Data |
-| 28 | Israel | 2,589 | ⏳ Pending Clay Data |
-| 29 | Taiwan | 2,492 | ⏳ Pending Clay Data |
-| 30 | Peru | 2,338 | ⏳ Pending Clay Data |
-| 31 | Hong Kong | 2,315 | ⏳ Pending Clay Data |
-| 32 | Russia | 2,312 | ⏳ Pending Clay Data |
-| 33 | Austria | 2,308 | ⏳ Pending Clay Data |
-| 34 | South Korea | 2,219 | ⏳ Pending Clay Data |
-| 35 | Kenya | 2,085 | ⏳ Pending Clay Data |
-| 36 | Morocco | 1,892 | ⏳ Pending Clay Data |
-| 37 | Finland | 1,876 | ⏳ Pending Clay Data |
-| 38 | Romania | 1,821 | ⏳ Pending Clay Data |
-| 39 | Czechia | 1,821 | ⏳ Pending Clay Data |
-| 40 | Ukraine | 1,679 | ⏳ Pending Clay Data |
-| 41 | Greece | 1,629 | ⏳ Pending Clay Data |
-| 42 | Thailand | 1,463 | ⏳ Pending Clay Data |
-| 43 | Sri Lanka | 1,364 | ⏳ Pending Clay Data |
-| 44 | Qatar | 1,024 | ⏳ Pending Clay Data |
-| 45 | Ecuador | 1,021 | ⏳ Pending Clay Data |
-| 46 | Hungary | 964 | ⏳ Pending Clay Data |
+| 1 | China | 613,790 | ⏳ Pending Clay Data |
+| 2 | Brazil | 148,396 | ⏳ Pending Clay Data |
+| 3 | Spain | 120,004 | ⏳ Pending Clay Data |
+| 4 | Canada | 104,682 | ⏳ Pending Clay Data |
+| 5 | Belgium | 60,198 | ⏳ Pending Clay Data |
+| 6 | Italy | 59,769 | ⏳ Pending Clay Data |
+| 7 | Turkey | 44,321 | ⏳ Pending Clay Data |
+| 8 | Pakistan | 44,308 | ⏳ Pending Clay Data |
+| 9 | Mexico | 33,347 | ⏳ Pending Clay Data |
+| 10 | South Africa | 31,727 | ⏳ Pending Clay Data |
+| 11 | Poland | 30,202 | ⏳ Pending Clay Data |
+| 12 | Switzerland | 29,368 | ⏳ Pending Clay Data |
+| 13 | Norway | 26,068 | ⏳ Pending Clay Data |
+| 14 | Nigeria | 26,015 | ⏳ Pending Clay Data |
+| 15 | Indonesia | 25,425 | ⏳ Pending Clay Data |
+| 16 | Argentina | 23,053 | ⏳ Pending Clay Data |
+| 17 | Colombia | 22,355 | ⏳ Pending Clay Data |
+| 18 | Bangladesh | 22,077 | ⏳ Pending Clay Data |
+| 19 | Japan | 20,298 | ⏳ Pending Clay Data |
+| 20 | Portugal | 18,012 | ⏳ Pending Clay Data |
+| 21 | Chile | 17,892 | ⏳ Pending Clay Data |
+| 22 | Israel | 15,838 | ⏳ Pending Clay Data |
+| 23 | Malaysia | 15,420 | ⏳ Pending Clay Data |
+| 24 | Saudi Arabia | 15,060 | ⏳ Pending Clay Data |
+| 25 | Egypt | 14,135 | ⏳ Pending Clay Data |
+| 26 | Austria | 13,808 | ⏳ Pending Clay Data |
+| 27 | Iran | 13,522 | ⏳ Pending Clay Data |
+| 28 | Romania | 12,692 | ⏳ Pending Clay Data |
+| 29 | Hong Kong | 12,588 | ⏳ Pending Clay Data |
+| 30 | Peru | 12,034 | ⏳ Pending Clay Data |
+| 31 | Kenya | 11,630 | ⏳ Pending Clay Data |
+| 32 | Philippines | 11,494 | ⏳ Pending Clay Data |
+| 33 | Finland | 11,335 | ⏳ Pending Clay Data |
+| 34 | Czechia | 11,138 | ⏳ Pending Clay Data |
+| 35 | Vietnam | 10,363 | ⏳ Pending Clay Data |
+| 36 | Greece | 8,207 | ⏳ Pending Clay Data |
+| 37 | Hungary | 8,021 | ⏳ Pending Clay Data |
+| 38 | Taiwan | 2,492 | ⏳ Pending Clay Data |
+| 39 | Russia | 2,312 | ⏳ Pending Clay Data |
+| 40 | South Korea | 2,219 | ⏳ Pending Clay Data |
+| 41 | Morocco | 1,892 | ⏳ Pending Clay Data |
+| 42 | Ukraine | 1,679 | ⏳ Pending Clay Data |
+| 43 | Thailand | 1,463 | ⏳ Pending Clay Data |
+| 44 | Sri Lanka | 1,364 | ⏳ Pending Clay Data |
+| 45 | Qatar | 1,024 | ⏳ Pending Clay Data |
+| 46 | Ecuador | 1,021 | ⏳ Pending Clay Data |
 | 47 | Ghana | 932 | ⏳ Pending Clay Data |
 | 48 | Tunisia | 900 | ⏳ Pending Clay Data |
 | 49 | Bulgaria | 867 | ⏳ Pending Clay Data |
