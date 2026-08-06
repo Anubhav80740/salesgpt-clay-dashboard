@@ -1,10 +1,10 @@
 {
-  "totalSalesGPT": 4154475,
-  "totalClay": 1783266,
+  "totalSalesGPT": 629668,
+  "totalClay": 4104505,
   "matchedCompanies": 0,
   "duplicateGroups": 0,
   "duplicateRowsRemoved": 42445,
-  "clayOnlyNewCompanies": 1783266,
+  "clayOnlyNewCompanies": 4104505,
   "readyForImportCount": 0,
   "salesgptGrowthTrend": 0
 }
